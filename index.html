@@ -2097,16 +2097,20 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
       return { items: fits.slice(0, 1), total: fits.length ? fits[0].p : 0, cap: cap, trimmed: true, overBudget: !fits.length, cheapest: all[0] };
     }
 
-    // Upgrade toward the preferred (goal-ranked) pick in each category while staying under cap.
+    // Spend the budget: in each category take the best-matching item that still fits.
+    // Within a category our guides rank roughly by price, so the dearest affordable
+    // goal-matching pick is the premium one — a $200 budget shouldn't return a $40 stack.
     for (var i = 0; i < chosen.length; i++) {
-      var others = chosen.filter(function (_, j) { return j !== i; })
-        .reduce(function (s, it) { return s + it.p; }, 0);
-      var best = chosen[i];
-      for (var k = 0; k < pools[i].length; k++) {
-        var cand = pools[i][k];
-        if (others + cand.p <= cap) { best = cand; break; }
+      var others = chosen.reduce(function (s, it, j) { return j === i ? s : s + it.p; }, 0);
+      var ranked = pools[i].slice().sort(function (x, y) {
+        var xg = x.g.indexOf(goalFlag) > -1 ? 0 : 1;
+        var yg = y.g.indexOf(goalFlag) > -1 ? 0 : 1;
+        if (xg !== yg) { return xg - yg; }
+        return y.p - x.p;
+      });
+      for (var k = 0; k < ranked.length; k++) {
+        if (others + ranked[k].p <= cap) { chosen[i] = ranked[k]; break; }
       }
-      chosen[i] = best;
     }
 
     return {
