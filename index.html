@@ -1912,24 +1912,46 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   ];
   var qstep = 0, qans = [];
   var qcard = document.getElementById('qcard');
-  var qoptsEl = document.getElementById('qopts');
-  var qpf = document.getElementById('qpf');
+
+  // showResult() replaces the card's contents, so rebuild the question skeleton
+  // whenever it's missing. Without this the quiz can't be retaken without a reload.
+  function ensureCard() {
+    if (document.getElementById('qopts')) { return; }
+    qcard.textContent = '';
+    var q = document.createElement('div'); q.className = 'qcard-q'; q.id = 'qq';
+    var s = document.createElement('div'); s.className = 'qcard-s'; s.id = 'qs';
+    var o = document.createElement('div'); o.className = 'qopts'; o.id = 'qopts';
+    var prog = document.createElement('div'); prog.className = 'qprog';
+    var bar = document.createElement('div'); bar.className = 'qpbar';
+    var fill = document.createElement('div'); fill.className = 'qpfill'; fill.id = 'qpf';
+    bar.appendChild(fill);
+    var next = document.createElement('button');
+    next.className = 'qnext'; next.type = 'button'; next.id = 'qnext';
+    next.innerHTML = 'Next &rarr;';
+    next.addEventListener('click', nextQ);
+    prog.appendChild(bar); prog.appendChild(next);
+    qcard.appendChild(q); qcard.appendChild(s); qcard.appendChild(o); qcard.appendChild(prog);
+  }
 
   function selOpt(el, v) {
-    qoptsEl.querySelectorAll('.qopt').forEach(function (o) { o.classList.remove('selected'); });
+    var wrap = document.getElementById('qopts');
+    if (wrap) { wrap.querySelectorAll('.qopt').forEach(function (x) { x.classList.remove('selected'); }); }
     el.classList.add('selected');
     qans[qstep] = v;
   }
-  // Delegated listener — safe for both initial and re-rendered options
-  qoptsEl.addEventListener('click', function (e) {
+  // Delegated on the card, so it survives the card being rebuilt
+  qcard.addEventListener('click', function (e) {
     var btn = e.target.closest('.qopt');
-    if (btn && qoptsEl.contains(btn)) { selOpt(btn, btn.dataset.val || btn.textContent.trim()); }
+    if (btn && qcard.contains(btn)) { selOpt(btn, btn.dataset.val || btn.textContent.trim()); }
   });
 
   function renderQ(i) {
     var d = qdata[i];
     qcard.style.opacity = '0'; qcard.style.transform = 'translateY(10px)';
     setTimeout(function () {
+      ensureCard();
+      var qoptsEl = document.getElementById('qopts');
+      var qpf = document.getElementById('qpf');
       document.getElementById('qq').textContent = d.q;
       document.getElementById('qs').textContent = d.s;
       qoptsEl.textContent = '';
@@ -1942,7 +1964,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
         if (qans[i] === o) { btn.classList.add('selected'); }
         qoptsEl.appendChild(btn);
       });
-      qpf.style.width = ((i / qdata.length) * 100) + '%';
+      if (qpf) { qpf.style.width = ((i / qdata.length) * 100) + '%'; }
       document.querySelectorAll('.qstep').forEach(function (s, j) { s.classList.toggle('active', j === i); });
       qcard.style.transition = 'opacity .28s ease,transform .28s ease';
       qcard.style.opacity = '1'; qcard.style.transform = 'translateY(0)';
@@ -1951,8 +1973,10 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 
   function nextQ() {
     if (!qans[qstep]) {
-      var first = qoptsEl.querySelector('.qopt');
-      if (first) { first.classList.add('selected'); qans[qstep] = qdata[qstep].opts[0]; }
+      var wrap = document.getElementById('qopts');
+      var first = wrap ? wrap.querySelector('.qopt') : null;
+      if (first) { first.classList.add('selected'); }
+      qans[qstep] = qdata[qstep].opts[0];
     }
     if (qstep < qdata.length - 1) { qstep++; renderQ(qstep); }
     else { showResult(); }
@@ -2181,11 +2205,18 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
       btn.textContent = 'View Full Results →';
       wrap.appendChild(btn);
 
+      var retake = document.createElement('button');
+      retake.type = 'button';
+      retake.className = 'qnext';
+      retake.style.cssText = 'display:inline-block;font-size:.85rem;padding:11px 20px;margin-left:10px;background:transparent;border:1.5px solid rgba(23,184,200,.4);color:#17b8c8';
+      retake.textContent = 'Start over';
+      retake.addEventListener('click', function () { qstep = 0; qans = []; renderQ(0); });
+      wrap.appendChild(retake);
+
       qcard.textContent = '';
       qcard.appendChild(wrap);
       qcard.style.transition = 'opacity .28s ease';
       qcard.style.opacity = '1';
-      qpf.style.width = '100%';
       document.querySelectorAll('.qstep').forEach(function (s) { s.classList.add('active'); });
     }, 140);
   }
