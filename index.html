@@ -1,16 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Protein Bros — Find Your Perfect Supplement | Toronto</title>
-<meta name="description" content="Toronto's premier supplement finder. Science-backed 'Top 5' guides and personalized recommendations for protein, vitamins, performance and recovery — every pick purchasable on Amazon.ca.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests">
+<title>Protein Bros | Best Protein Powder, Creatine &amp; Vitamins in Toronto</title>
+<meta name="description" content="Toronto's science-backed supplement finder. Compare the best protein powder, whey isolate, creatine monohydrate, pre-workout, vitamin D3 and omega-3 in Canada. Take the 2-minute quiz — every Top 5 pick is third-party tested and shoppable on Amazon.ca.">
+<meta name="keywords" content="best protein powder Canada, protein powder Toronto, whey protein isolate, plant based protein powder, creatine monohydrate Canada, best pre-workout Canada, vitamin D3 Canada, omega-3 fish oil, magnesium glycinate, collagen peptides, supplement store Toronto, Amazon.ca supplements, third party tested supplements, NSF Certified for Sport, Informed Choice protein, best supplements for muscle gain, supplement finder quiz">
+<link rel="canonical" href="https://proteinbros.ca/">
+<link rel="alternate" hreflang="en-ca" href="https://proteinbros.ca/">
+<link rel="alternate" hreflang="x-default" href="https://proteinbros.ca/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#0f2d4a">
+<meta name="author" content="Protein Bros Research Desk">
+<meta name="publisher" content="Protein Bros">
+<meta name="rating" content="general">
+<!-- Local / geo signals -->
+<meta name="geo.region" content="CA-ON">
+<meta name="geo.placename" content="Toronto, Ontario">
+<meta name="geo.position" content="43.653226;-79.383184">
+<meta name="ICBM" content="43.653226, -79.383184">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Protein Bros">
+<meta property="og:locale" content="en_CA">
+<meta property="og:url" content="https://proteinbros.ca/">
+<meta property="og:title" content="Protein Bros | Toronto's #1 Science-Backed Supplement Finder">
+<meta property="og:description" content="Answer 5 quick questions and get matched with the exact supplements your body needs — the best protein powder, creatine, pre-workout and vitamins in Canada, backed by peer-reviewed science.">
+<meta property="og:image" content="https://proteinbros.ca/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Protein Bros — Toronto's science-backed supplement finder">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Protein Bros | Toronto's #1 Science-Backed Supplement Finder">
+<meta name="twitter:description" content="Take the quiz. Get matched with the best protein powder, creatine, vitamins &amp; pre-workout for your goals — all shoppable on Amazon.ca.">
+<meta name="twitter:image" content="https://proteinbros.ca/og-image.jpg">
+<meta name="twitter:image:alt" content="Protein Bros — Toronto's science-backed supplement finder">
+<!-- Security headers -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://m.media-amazon.com; connect-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="DENY">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://m.media-amazon.com" crossorigin>
+<link rel="dns-prefetch" href="https://m.media-amazon.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -20,14 +55,33 @@ body.noscroll{overflow:hidden}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 button{cursor:pointer;border:none;background:none;font-family:inherit}
+
 :root{
-  --green-deep:#0f2d4a;--green-dark:#0a1e33;--green-mid:#163d61;--green-accent:#1e6080;--green-light:#2a8ab8;
-  --gold:#17b8c8;--gold-light:#44d4e2;--gold-dark:#0f92a0;--cream:#f4f9fc;--cream-dark:#e5f0f8;
-  --text-dark:#0c1e35;--text-light:#f4f9fc;--text-muted:#5a7595;
-  --radius-sm:8px;--radius-md:16px;--radius-lg:24px;--radius-xl:40px;
-  --shadow-sm:0 2px 12px rgba(12,30,53,.08);--shadow-md:0 8px 32px rgba(12,30,53,.12);--shadow-lg:0 24px 64px rgba(12,30,53,.18);
-  --t:200ms cubic-bezier(.4,0,.2,1);--ts:400ms cubic-bezier(.4,0,.2,1);
+  --green-deep:#0f2d4a;
+  --green-dark:#0a1e33;
+  --green-mid:#163d61;
+  --green-accent:#1e6080;
+  --green-light:#2a8ab8;
+  --gold:#17b8c8;
+  --gold-light:#44d4e2;
+  --gold-dark:#0f92a0;
+  --cream:#f4f9fc;
+  --cream-dark:#e5f0f8;
+  --text-dark:#0c1e35;
+  --text-light:#f4f9fc;
+  --text-muted:#5a7595;
+  --radius-sm:8px;
+  --radius-md:16px;
+  --radius-lg:24px;
+  --radius-xl:40px;
+  --shadow-sm:0 2px 12px rgba(12,30,53,.08);
+  --shadow-md:0 8px 32px rgba(12,30,53,.12);
+  --shadow-lg:0 24px 64px rgba(12,30,53,.18);
+  --t:200ms cubic-bezier(.4,0,.2,1);
+  --ts:400ms cubic-bezier(.4,0,.2,1);
 }
+
+/* Scroll Reveal */
 .reveal{opacity:0;transform:translateY(36px);transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1)}
 .reveal.visible{opacity:1;transform:translateY(0)}
 .reveal-l{opacity:0;transform:translateX(-40px);transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1)}
@@ -36,6 +90,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .reveal-r.visible{opacity:1;transform:translateX(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
 @media(prefers-reduced-motion:reduce){.reveal,.reveal-l,.reveal-r{opacity:1;transform:none;transition:none}}
+
+/* Nav */
 .nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);width:calc(100% - 32px);max-width:1200px;z-index:100;background:rgba(15,45,74,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(23,184,200,.15);border-radius:var(--radius-xl);padding:14px 28px;display:flex;align-items:center;justify-content:space-between;transition:var(--t)}
 .nav-logo{display:flex;align-items:center;gap:10px}
 .nav-logo-mark{width:36px;height:36px;background:var(--gold);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -50,6 +106,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .hamburger span{width:24px;height:2px;background:var(--text-light);border-radius:2px;transition:var(--t)}
 @media(max-width:860px){.nav-links{display:none}.hamburger{display:flex}}
+
+/* Hero */
 .hero{min-height:100vh;background:var(--green-deep);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:140px 24px 80px}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(30,92,128,.4) 0%,transparent 70%),radial-gradient(ellipse 50% 40% at 20% 80%,rgba(23,184,200,.08) 0%,transparent 60%);pointer-events:none}
 .hero-inner{max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2}
@@ -75,18 +133,27 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .scroll-hint{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(244,249,252,.28);font-size:.72rem;letter-spacing:.07em;text-transform:uppercase}
 .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,rgba(23,184,200,.6),transparent);animation:sline 1.8s ease-in-out infinite}
 @keyframes sline{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* Marquee */
 .marquee{background:var(--green-mid);padding:18px 0;overflow:hidden;border-top:1px solid rgba(23,184,200,.1);border-bottom:1px solid rgba(23,184,200,.1)}
 .m-track{display:flex;gap:56px;animation:mscroll 32s linear infinite;width:max-content}
 .m-item{display:flex;align-items:center;gap:10px;color:rgba(244,249,252,.38);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
 .m-dot{width:4px;height:4px;background:var(--gold);border-radius:50%;opacity:.55}
 @keyframes mscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.m-track{animation:none}}
-.s{padding:100px 24px}.c{max-width:1200px;margin:0 auto;width:100%}
+
+/* Shared Section */
+.s{padding:100px 24px}
+.c{max-width:1200px;margin:0 auto;width:100%}
 .stag{display:inline-flex;align-items:center;gap:8px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
 .stag-l{width:22px;height:2px;background:var(--gold);flex-shrink:0}
 .sh{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;color:var(--text-dark)}
-.sh.light{color:var(--text-light)}.slead{font-size:1.05rem;color:var(--text-muted);line-height:1.72;max-width:520px;margin-top:14px}
-.slead.light{color:rgba(244,249,252,.55)}.tgold{color:var(--gold)}
+.sh.light{color:var(--text-light)}
+.slead{font-size:1.05rem;color:var(--text-muted);line-height:1.72;max-width:520px;margin-top:14px}
+.slead.light{color:rgba(244,249,252,.55)}
+.tgold{color:var(--gold)}
+
+/* Quiz */
 .quiz-s{background:var(--green-deep);padding:100px 24px;position:relative;overflow:hidden}
 .quiz-s::before{content:'';position:absolute;top:-180px;right:-180px;width:560px;height:560px;background:radial-gradient(circle,rgba(23,184,200,.07) 0%,transparent 70%);pointer-events:none}
 .qgrid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:56px}
@@ -111,6 +178,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .qnext{background:var(--gold);color:var(--green-deep);font-size:.875rem;font-weight:600;padding:11px 22px;border-radius:var(--radius-xl);cursor:pointer;transition:background var(--t),transform var(--t);white-space:nowrap}
 .qnext:hover{background:var(--gold-light);transform:translateY(-1px)}
 @media(max-width:900px){.qgrid{grid-template-columns:1fr;gap:36px}}
+
+/* Products */
 .prod-s{background:var(--cream);padding:100px 24px}
 .prod-hdr{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:44px;flex-wrap:wrap}
 .filters{display:flex;gap:8px;flex-wrap:wrap}
@@ -121,6 +190,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .pcard{background:#fff;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(12,30,53,.06);transition:transform var(--ts),box-shadow var(--ts);display:flex;flex-direction:column}
 .pcard:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
 .pimg{aspect-ratio:1;background:var(--cream-dark);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.pimg img{width:100%;height:100%;object-fit:contain;padding:16px;background:#fff;mix-blend-mode:normal}
 .ppill{width:76px;height:132px;border-radius:38px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:.65rem;font-weight:700;color:#fff;writing-mode:vertical-lr;letter-spacing:.12em;text-transform:uppercase;position:relative;overflow:hidden}
 .ppill::after{content:'';position:absolute;top:8px;left:50%;transform:translateX(-50%);width:28px;height:28px;background:rgba(255,255,255,.18);border-radius:50%}
 .ptag{position:absolute;top:14px;left:14px;background:var(--gold);color:var(--green-deep);font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 11px;border-radius:var(--radius-xl)}
@@ -141,6 +211,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .affnote strong{color:var(--green-accent)}
 @media(max-width:900px){.pgrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.pgrid{grid-template-columns:1fr}}
+
+/* Features */
 .feat-s{background:var(--green-mid);padding:100px 24px}
 .fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
 .fcard{background:rgba(244,249,252,.035);border:1px solid rgba(244,249,252,.07);border-radius:var(--radius-lg);padding:32px 28px;transition:border-color var(--t),background var(--t)}
@@ -151,6 +223,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .fd{font-size:.87rem;color:rgba(244,249,252,.45);line-height:1.7}
 @media(max-width:900px){.fgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.fgrid{grid-template-columns:1fr}}
+
+/* About */
 .about-s{background:var(--cream);padding:100px 24px}
 .agrid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .avis{position:relative}
@@ -172,6 +246,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .avt{font-size:.92rem;font-weight:600;color:var(--text-dark);margin-bottom:3px}
 .avd{font-size:.83rem;color:var(--text-muted);line-height:1.6}
 @media(max-width:900px){.agrid{grid-template-columns:1fr;gap:44px}.afloat{right:0}}
+
+/* Testimonials */
 .test-s{background:var(--green-deep);padding:100px 24px;overflow:hidden}
 .ttrack-wrap{overflow:hidden;margin:44px -24px 0}
 .ttrack{display:flex;gap:22px;animation:tscroll 34s linear infinite;width:max-content;padding:6px 24px}
@@ -186,13 +262,16 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .tloc{font-size:.76rem;color:rgba(244,249,252,.38)}
 @keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.ttrack{animation:none}}
+
+/* Blog */
 .blog-s{background:var(--cream);padding:100px 24px}
 .bhdr{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:44px;flex-wrap:wrap}
 .bgrid{display:grid;grid-template-columns:1.55fr 1fr 1fr;gap:22px}
 .bcard{border-radius:var(--radius-lg);overflow:hidden;background:#fff;border:1px solid rgba(12,30,53,.055);cursor:pointer;transition:transform var(--ts),box-shadow var(--ts);text-align:left;display:flex;flex-direction:column;width:100%}
 .bcard:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
 .bimg{overflow:hidden;position:relative;display:flex;align-items:flex-end;padding:16px}
-.bcard .bimg{aspect-ratio:16/9}.bcard:first-child .bimg{aspect-ratio:4/3}
+.bcard .bimg{aspect-ratio:16/9}
+.bcard:first-child .bimg{aspect-ratio:4/3}
 .bimg-inner{position:absolute;inset:0}
 .bimg-badge{position:relative;z-index:2;background:rgba(15,45,74,.72);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:var(--radius-xl);backdrop-filter:blur(4px)}
 .bcont{padding:22px;display:flex;flex-direction:column;flex:1}
@@ -210,6 +289,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .bcard:hover .blink svg{transform:translateX(3px)}
 @media(max-width:1000px){.bgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.bgrid{grid-template-columns:1fr}}
+
+/* Article Modal */
 .amodal{position:fixed;inset:0;z-index:300;display:flex;align-items:flex-start;justify-content:center;padding:32px 16px;overflow-y:auto;opacity:0;pointer-events:none;transition:opacity var(--t)}
 .amodal.open{opacity:1;pointer-events:auto}
 .amodal-bg{position:fixed;inset:0;background:rgba(10,20,33,.74);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
@@ -217,7 +298,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .amodal-x{position:absolute;top:16px;right:16px;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.9);border:1px solid rgba(12,30,53,.08);display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--text-dark);z-index:5;transition:background var(--t),transform var(--t)}
 .amodal-x:hover{background:#fff;transform:rotate(90deg)}
 .amodal-body{max-height:calc(100vh - 64px);overflow-y:auto}
-.art{display:none}.art.show{display:block}
+.art{display:none}
+.art.show{display:block}
 .art-head{background:var(--green-deep);color:#fff;padding:52px 48px 40px;position:relative;overflow:hidden}
 .art-head::before{content:'';position:absolute;top:-120px;right:-120px;width:360px;height:360px;background:radial-gradient(circle,rgba(23,184,200,.16),transparent 70%);pointer-events:none}
 .art-tag{position:relative;display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
@@ -246,6 +328,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .art-cite li{font-size:.8rem;color:var(--text-muted);line-height:1.6;margin-bottom:6px}
 .art-disc{margin-top:22px;font-size:.78rem;color:var(--text-muted);line-height:1.6;font-style:italic}
 @media(max-width:600px){.art-head{padding:44px 24px 32px}.art-content{padding:30px 24px 40px}.pick{flex-direction:column;gap:12px}}
+
+/* Signup / Auth */
 .auth-s{background:var(--green-deep);padding:100px 24px;position:relative;overflow:hidden}
 .auth-s::before{content:'';position:absolute;bottom:-160px;left:-160px;width:520px;height:520px;background:radial-gradient(circle,rgba(23,184,200,.08),transparent 70%);pointer-events:none}
 .auth-grid{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative}
@@ -270,13 +354,16 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .auth-submit:hover{background:var(--gold-light);transform:translateY(-1px)}
 .auth-submit:disabled{opacity:.7;cursor:default;transform:none}
 .auth-msg{font-size:.85rem;line-height:1.55;text-align:center;margin-top:6px;min-height:1px}
-.auth-msg.ok{color:var(--gold-light)}.auth-msg.err{color:#ff9d8a}
+.auth-msg.ok{color:var(--gold-light)}
+.auth-msg.err{color:#ff9d8a}
 .auth-note{font-size:.74rem;color:rgba(244,249,252,.38);text-align:center;margin-top:18px;line-height:1.6}
 .auth-note a{color:rgba(23,184,200,.7);text-decoration:underline}
 .checkrow{display:flex;align-items:flex-start;gap:9px;margin-top:4px}
 .checkrow input{width:16px;height:16px;margin-top:2px;flex-shrink:0;accent-color:var(--gold)}
 .checkrow label{font-size:.78rem;color:rgba(244,249,252,.5);line-height:1.5}
 @media(max-width:860px){.auth-grid{grid-template-columns:1fr;gap:40px}.auth-copy{text-align:center}.auth-list{max-width:420px;margin:26px auto 0}}
+
+/* Footer */
 .footer{background:var(--green-deep);padding:68px 24px 30px;border-top:1px solid rgba(23,184,200,.09)}
 .fgr{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:52px}
 .fbrand{display:flex;flex-direction:column;gap:18px}
@@ -303,10 +390,14 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .flegal a:hover{color:rgba(244,249,252,.55)}
 @media(max-width:900px){.fgr{grid-template-columns:1fr 1fr}}
 @media(max-width:540px){.fgr{grid-template-columns:1fr}.fbot{flex-direction:column;text-align:center}}
+
+/* View all link */
 .va{display:inline-flex;align-items:center;gap:7px;font-size:.85rem;font-weight:600;color:var(--text-muted);transition:color var(--t)}
 .va:hover{color:var(--green-accent)}
 .va svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform var(--t)}
 .va:hover svg{transform:translateX(3px)}
+
+/* Mobile Nav */
 .mnav{position:fixed;inset:0;z-index:200;pointer-events:none;opacity:0;transition:opacity var(--t)}
 .mnav.open{pointer-events:all;opacity:1}
 .mnav-bg{position:absolute;inset:0;background:rgba(15,45,74,.92);backdrop-filter:blur(8px)}
@@ -319,61 +410,315 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .mnav-cta{background:var(--gold);color:var(--green-deep);text-align:center;padding:13px;border-radius:var(--radius-xl);font-weight:600;margin-top:22px;transition:background var(--t)}
 .mnav-cta:hover{background:var(--gold-light)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://proteinbros.ca/#organization",
+      "name": "Protein Bros",
+      "alternateName": "ProteinBros.ca",
+      "url": "https://proteinbros.ca/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://proteinbros.ca/logo.png",
+        "caption": "Protein Bros logo"
+      },
+      "image": "https://proteinbros.ca/og-image.jpg",
+      "foundingDate": "2019",
+      "slogan": "Science-backed, community-driven, zero BS.",
+      "description": "Toronto-based supplement finder publishing science-backed Top 5 buying guides for protein powder, vitamins, pre-workout, creatine and recovery supplements, with every pick shoppable on Amazon.ca.",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Toronto",
+          "containedInPlace": { "@type": "AdministrativeArea", "name": "Ontario, Canada" }
+        },
+        { "@type": "Country", "name": "Canada" }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toronto",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      "knowsAbout": [
+        "protein powder",
+        "best protein powder Canada",
+        "whey protein isolate",
+        "hydrolyzed whey isolate",
+        "plant based protein powder",
+        "vegan protein powder",
+        "creatine monohydrate",
+        "Creapure creatine",
+        "vitamin D3",
+        "vitamin K2",
+        "omega-3 fish oil",
+        "EPA and DHA",
+        "pre-workout supplements",
+        "L-citrulline malate",
+        "beta-alanine",
+        "caffeine and exercise performance",
+        "magnesium bisglycinate",
+        "collagen peptides",
+        "essential amino acids",
+        "BCAAs",
+        "multivitamins",
+        "third-party tested supplements",
+        "NSF Certified for Sport",
+        "Informed Choice certification",
+        "sports nutrition",
+        "supplement shopping in Toronto"
+      ],
+      "publishingPrinciples": "https://proteinbros.ca/#about",
+      "sameAs": []
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://proteinbros.ca/#website",
+      "url": "https://proteinbros.ca/",
+      "name": "Protein Bros",
+      "description": "Toronto's science-backed supplement finder and Top 5 buying guides.",
+      "inLanguage": "en-CA",
+      "publisher": { "@id": "https://proteinbros.ca/#organization" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://proteinbros.ca/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://proteinbros.ca/" },
+        { "@type": "ListItem", "position": 2, "name": "Supplement Finder Quiz", "item": "https://proteinbros.ca/#quiz" },
+        { "@type": "ListItem", "position": 3, "name": "Top 5 Guides", "item": "https://proteinbros.ca/#blog" },
+        { "@type": "ListItem", "position": 4, "name": "Shop All Picks", "item": "https://proteinbros.ca/#products" }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://proteinbros.ca/#webpage",
+      "url": "https://proteinbros.ca/",
+      "name": "Protein Bros | Best Protein Powder, Creatine & Vitamins in Toronto",
+      "description": "Toronto's science-backed supplement finder. Compare the best protein powder, whey isolate, creatine monohydrate, pre-workout, vitamin D3 and omega-3 in Canada — every Top 5 pick third-party tested and shoppable on Amazon.ca.",
+      "inLanguage": "en-CA",
+      "isPartOf": { "@id": "https://proteinbros.ca/#website" },
+      "about": { "@id": "https://proteinbros.ca/#organization" },
+      "breadcrumb": { "@id": "https://proteinbros.ca/#breadcrumb" },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": "https://proteinbros.ca/og-image.jpg" },
+      "significantLink": [
+        "https://proteinbros.ca/#quiz",
+        "https://proteinbros.ca/#products",
+        "https://proteinbros.ca/#blog"
+      ],
+      "hasPart": [
+        {
+          "@type": "Article",
+          "@id": "https://proteinbros.ca/#guide-protein",
+          "headline": "Top 5 Protein Powders of 2026: Whey, Isolate & Plant, Ranked by the Science",
+          "description": "Protein quality comes down to leucine content, digestibility (DIAAS) and third-party testing. The five best-value powders on Amazon.ca ranked against those criteria.",
+          "datePublished": "2026-06-24",
+          "dateModified": "2026-08-01",
+          "inLanguage": "en-CA",
+          "articleSection": "Protein Powders",
+          "timeRequired": "PT11M",
+          "keywords": "best protein powder Canada, whey protein isolate, plant based protein, DIAAS, leucine, third party tested protein",
+          "about": ["Protein powder", "Whey protein", "Plant-based protein"],
+          "author": { "@type": "Organization", "name": "Protein Bros Research Desk", "url": "https://proteinbros.ca/#about" },
+          "publisher": { "@id": "https://proteinbros.ca/#organization" },
+          "isPartOf": { "@id": "https://proteinbros.ca/#webpage" }
+        },
+        {
+          "@type": "Article",
+          "@id": "https://proteinbros.ca/#guide-vitamins",
+          "headline": "Top 5 Vitamins & Omega-3s Every Torontonian Should Actually Own",
+          "description": "A large share of Canadians fall below adequate vitamin D blood levels in winter. Five evidence-backed daily essentials for Toronto's latitude.",
+          "datePublished": "2026-06-17",
+          "dateModified": "2026-08-01",
+          "inLanguage": "en-CA",
+          "articleSection": "Vitamins & Omega-3",
+          "timeRequired": "PT9M",
+          "keywords": "vitamin D3 Canada, winter vitamin D, omega-3 fish oil, EPA DHA, multivitamin Canada, IFOS certified",
+          "about": ["Vitamin D", "Omega-3 fatty acids", "Multivitamins"],
+          "author": { "@type": "Organization", "name": "Protein Bros Research Desk", "url": "https://proteinbros.ca/#about" },
+          "publisher": { "@id": "https://proteinbros.ca/#organization" },
+          "isPartOf": { "@id": "https://proteinbros.ca/#webpage" }
+        },
+        {
+          "@type": "Article",
+          "@id": "https://proteinbros.ca/#guide-performance",
+          "headline": "Top 5 Pre-Workouts: Clinically Dosed, No Fairy Dust",
+          "description": "Caffeine, L-citrulline and beta-alanine have the strongest performance evidence, and each has a threshold dose. Five formulas that dose them transparently.",
+          "datePublished": "2026-06-11",
+          "dateModified": "2026-08-01",
+          "inLanguage": "en-CA",
+          "articleSection": "Performance",
+          "timeRequired": "PT10M",
+          "keywords": "best pre-workout Canada, clinically dosed pre workout, L-citrulline, beta-alanine, caffeine dose, stim free pre workout",
+          "about": ["Pre-workout supplements", "Caffeine", "L-citrulline", "Beta-alanine"],
+          "author": { "@type": "Organization", "name": "Protein Bros Research Desk", "url": "https://proteinbros.ca/#about" },
+          "publisher": { "@id": "https://proteinbros.ca/#organization" },
+          "isPartOf": { "@id": "https://proteinbros.ca/#webpage" }
+        },
+        {
+          "@type": "Article",
+          "@id": "https://proteinbros.ca/#guide-recovery",
+          "headline": "Top 5 Recovery Supplements: Creatine, EAAs, Magnesium & More",
+          "description": "Creatine monohydrate has hundreds of trials behind it. Alongside EAAs, magnesium and collagen, the five recovery picks worth your money.",
+          "datePublished": "2026-06-05",
+          "dateModified": "2026-08-01",
+          "inLanguage": "en-CA",
+          "articleSection": "Recovery",
+          "timeRequired": "PT10M",
+          "keywords": "creatine monohydrate Canada, Creapure, essential amino acids, magnesium glycinate sleep, collagen peptides joints",
+          "about": ["Creatine", "Essential amino acids", "Magnesium", "Collagen"],
+          "author": { "@type": "Organization", "name": "Protein Bros Research Desk", "url": "https://proteinbros.ca/#about" },
+          "publisher": { "@id": "https://proteinbros.ca/#organization" },
+          "isPartOf": { "@id": "https://proteinbros.ca/#webpage" }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://proteinbros.ca/#product-picks",
+      "name": "The Science-Backed 20 — Protein Bros Supplement Picks",
+      "description": "Every product featured across the four Protein Bros Top 5 buying guides, with prices verified on Amazon.ca on 1 August 2026.",
+      "numberOfItems": 20,
+      "itemListOrder": "https://schema.org/ItemListUnordered",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "item": { "@type": "Product", "name": "Gold Standard 100% Whey", "brand": { "@type": "Brand", "name": "Optimum Nutrition" }, "category": "Protein Powder", "description": "24g of whey-isolate-primary protein per scoop with ~5.5g BCAAs.", "url": "https://www.amazon.ca/dp/B000GISU1M", "sku": "B000GISU1M", "offers": { "@type": "Offer", "price": "128.29", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B000GISU1M" } } },
+        { "@type": "ListItem", "position": 2, "item": { "@type": "Product", "name": "ISO100 Hydrolyzed Whey Isolate", "brand": { "@type": "Brand", "name": "Dymatize" }, "category": "Protein Powder", "description": "25g fast-digesting hydrolyzed isolate with near-zero lactose.", "url": "https://www.amazon.ca/dp/B002N6F2UW", "sku": "B002N6F2UW", "offers": { "@type": "Offer", "price": "199.97", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B002N6F2UW" } } },
+        { "@type": "ListItem", "position": 3, "item": { "@type": "Product", "name": "Sport Organic Plant Protein", "brand": { "@type": "Brand", "name": "Garden of Life" }, "category": "Protein Powder", "description": "30g complete plant protein from organic pea protein with 5.5g BCAAs.", "url": "https://www.amazon.ca/dp/B07FQW2PGQ", "sku": "B07FQW2PGQ", "offers": { "@type": "Offer", "price": "50.39", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B07FQW2PGQ" } } },
+        { "@type": "ListItem", "position": 4, "item": { "@type": "Product", "name": "Whey Protein Isolate", "brand": { "@type": "Brand", "name": "NOW Sports" }, "category": "Protein Powder", "description": "25g isolate per scoop with minimal additives, Informed-Sport certified.", "url": "https://www.amazon.ca/dp/B0FCHRNY83", "sku": "B0FCHRNY83", "offers": { "@type": "Offer", "price": "155.19", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B0FCHRNY83" } } },
+        { "@type": "ListItem", "position": 5, "item": { "@type": "Product", "name": "Whey Protein Powder", "brand": { "@type": "Brand", "name": "Pure Protein" }, "category": "Protein Powder", "description": "25g whey protein per scoop with 2g sugar — the lowest cost per serving in the guide.", "url": "https://www.amazon.ca/dp/B00BMHB5JA", "sku": "B00BMHB5JA", "offers": { "@type": "Offer", "price": "21.84", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B00BMHB5JA" } } },
+        { "@type": "ListItem", "position": 6, "item": { "@type": "Product", "name": "Vitamin D-3 & K-2", "brand": { "@type": "Brand", "name": "NOW Foods" }, "category": "Vitamins", "description": "1000 IU D3 paired with 45mcg MK-4 K2 for calcium metabolism.", "url": "https://www.amazon.ca/dp/B00J3888HW", "sku": "B00J3888HW", "offers": { "@type": "Offer", "price": "14.47", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B00J3888HW" } } },
+        { "@type": "ListItem", "position": 7, "item": { "@type": "Product", "name": "Ultimate Omega", "brand": { "@type": "Brand", "name": "Nordic Naturals" }, "category": "Omega-3", "description": "1280mg omega-3 (EPA/DHA) in triglyceride form, IFOS-tested.", "url": "https://www.amazon.ca/dp/B00PUX3GDU", "sku": "B00PUX3GDU", "offers": { "@type": "Offer", "price": "70.19", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B00PUX3GDU" } } },
+        { "@type": "ListItem", "position": 8, "item": { "@type": "Product", "name": "Vitamin D3 2500 IU Extra Strength", "brand": { "@type": "Brand", "name": "Webber Naturals" }, "category": "Vitamins", "description": "2500 IU (62.5mcg) D3 softgel from a Canadian brand.", "url": "https://www.amazon.ca/dp/B0B3LWGHGD", "sku": "B0B3LWGHGD", "offers": { "@type": "Offer", "price": "6.99", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B0B3LWGHGD" } } },
+        { "@type": "ListItem", "position": 9, "item": { "@type": "Product", "name": "100% Complete Multivitamin", "brand": { "@type": "Brand", "name": "Jamieson" }, "category": "Vitamins", "description": "Full-spectrum daily multivitamin at Max Strength concentrations.", "url": "https://www.amazon.ca/dp/B0CTP2H5WH", "sku": "B0CTP2H5WH", "offers": { "@type": "Offer", "price": "19.47", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B0CTP2H5WH" } } },
+        { "@type": "ListItem", "position": 10, "item": { "@type": "Product", "name": "Omega-3 Fish Oil 1250mg", "brand": { "@type": "Brand", "name": "Sports Research" }, "category": "Omega-3", "description": "1250mg fish oil per softgel, IFOS certified, higher potency at lower cost.", "url": "https://www.amazon.ca/dp/B07DX89ZHN", "sku": "B07DX89ZHN", "offers": { "@type": "Offer", "price": "38.95", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B07DX89ZHN" } } },
+        { "@type": "ListItem", "position": 11, "item": { "@type": "Product", "name": "Pulse Pre-Workout", "brand": { "@type": "Brand", "name": "Legion" }, "category": "Pre-Workout", "description": "Fully disclosed label with no proprietary blends, artificial sweeteners or dyes.", "url": "https://www.amazon.ca/dp/B00QYZ6MLG", "sku": "B00QYZ6MLG", "offers": { "@type": "Offer", "price": "59.99", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B00QYZ6MLG" } } },
+        { "@type": "ListItem", "position": 12, "item": { "@type": "Product", "name": "Pre-Workout", "brand": { "@type": "Brand", "name": "Alani Nu" }, "category": "Pre-Workout", "description": "100mg caffeine from coffee beans plus citrulline and L-theanine.", "url": "https://www.amazon.ca/dp/B0D84V1JGH", "sku": "B0D84V1JGH", "offers": { "@type": "Offer", "price": "39.97", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B0D84V1JGH" } } },
+        { "@type": "ListItem", "position": 13, "item": { "@type": "Product", "name": "Total War Pre-Workout", "brand": { "@type": "Brand", "name": "REDCON1" }, "category": "Pre-Workout", "description": "6g citrulline malate, 250mg caffeine anhydrous and beta-alanine.", "url": "https://www.amazon.ca/dp/B0913GL8QF", "sku": "B0913GL8QF", "offers": { "@type": "Offer", "price": "47.14", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B0913GL8QF" } } },
+        { "@type": "ListItem", "position": 14, "item": { "@type": "Product", "name": "C4 Original Pre-Workout", "brand": { "@type": "Brand", "name": "Cellucor" }, "category": "Pre-Workout", "description": "150mg caffeine and 1.6g beta-alanine at an entry-level price.", "url": "https://www.amazon.ca/dp/B07D3MW22V", "sku": "B07D3MW22V", "offers": { "@type": "Offer", "price": "34.99", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B07D3MW22V" } } },
+        { "@type": "ListItem", "position": 15, "item": { "@type": "Product", "name": "2:1 Citrulline Malate", "brand": { "@type": "Brand", "name": "ALLMAX" }, "category": "Performance", "description": "Pure unflavoured 2:1 citrulline malate powder, stimulant free.", "url": "https://www.amazon.ca/dp/B078VH1X9J", "sku": "B078VH1X9J", "offers": { "@type": "Offer", "price": "31.00", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B078VH1X9J" } } },
+        { "@type": "ListItem", "position": 16, "item": { "@type": "Product", "name": "Micronized Creatine Monohydrate", "brand": { "@type": "Brand", "name": "Optimum Nutrition" }, "category": "Creatine", "description": "5g pure creatine monohydrate per serving, no fillers.", "url": "https://www.amazon.ca/dp/B0DH5PD6MJ", "sku": "B0DH5PD6MJ", "offers": { "@type": "Offer", "price": "29.64", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B0DH5PD6MJ" } } },
+        { "@type": "ListItem", "position": 17, "item": { "@type": "Product", "name": "Creatine (Creapure)", "brand": { "@type": "Brand", "name": "Thorne" }, "category": "Creatine", "description": "5g German Creapure creatine, NSF Certified for Sport.", "url": "https://www.amazon.ca/dp/B0CNJ22ZCW", "sku": "B0CNJ22ZCW", "offers": { "@type": "Offer", "price": "55.00", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B0CNJ22ZCW" } } },
+        { "@type": "ListItem", "position": 18, "item": { "@type": "Product", "name": "Amino Energy", "brand": { "@type": "Brand", "name": "Optimum Nutrition" }, "category": "Amino Acids", "description": "5g amino blend (EAAs + BCAAs) with 100mg caffeine from green tea and coffee.", "url": "https://www.amazon.ca/dp/B008O47SI6", "sku": "B008O47SI6", "offers": { "@type": "Offer", "price": "34.46", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B008O47SI6" } } },
+        { "@type": "ListItem", "position": 19, "item": { "@type": "Product", "name": "Magnesium Bisglycinate", "brand": { "@type": "Brand", "name": "NOW Foods" }, "category": "Minerals", "description": "Highly absorbable chelated magnesium for muscle relaxation and sleep quality.", "url": "https://www.amazon.ca/dp/B078WV1JH6", "sku": "B078WV1JH6", "offers": { "@type": "Offer", "price": "25.03", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B078WV1JH6" } } },
+        { "@type": "ListItem", "position": 20, "item": { "@type": "Product", "name": "Collagen Peptides", "brand": { "@type": "Brand", "name": "Vital Proteins" }, "category": "Collagen", "description": "20g grass-fed bovine collagen peptides for connective tissue and joint recovery.", "url": "https://www.amazon.ca/dp/B0145N1HH2", "sku": "B0145N1HH2", "offers": { "@type": "Offer", "price": "47.99", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-09-01", "url": "https://www.amazon.ca/dp/B0145N1HH2" } } }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
+
+<!-- Nav -->
 <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-logo">
-    <div class="nav-logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div>
+    <div class="nav-logo-mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+    </div>
     <span class="nav-brand">Protein<span>Bros</span></span>
   </div>
   <div class="nav-links">
-    <a href="#quiz">Find My Supplement</a><a href="#products">Shop</a><a href="#blog">Top 5 Guides</a><a href="#about">About</a><a href="#signup">Sign Up</a>
+    <a href="#quiz" title="Take the supplement finder quiz">Find My Supplement</a>
+    <a href="#products" title="Shop all 20 science-backed supplement picks">Shop</a>
+    <a href="#blog" title="Read the Top 5 science-backed buying guides">Top 5 Guides</a>
+    <a href="#about" title="About Protein Bros, Toronto">About</a>
+    <a href="#signup" title="Sign up for weekly supplement research">Sign Up</a>
   </div>
   <a href="#quiz" class="nav-cta">Take the Quiz</a>
-  <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger"><span></span><span></span><span></span></button>
+  <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- Mobile Nav -->
 <div class="mnav" id="mnav" aria-hidden="true">
   <div class="mnav-bg" id="mnavBg"></div>
   <div class="mnav-panel">
     <button class="mnav-x" id="mnavX" aria-label="Close menu">&#x2715;</button>
-    <a href="#quiz" class="mnav-link">Find My Supplement</a><a href="#products" class="mnav-link">Shop</a>
-    <a href="#blog" class="mnav-link">Top 5 Guides</a><a href="#about" class="mnav-link">About</a>
-    <a href="#signup" class="mnav-link">Sign Up</a><a href="#quiz" class="mnav-cta">Take the Quiz</a>
+    <a href="#quiz" class="mnav-link">Find My Supplement</a>
+    <a href="#products" class="mnav-link">Shop</a>
+    <a href="#blog" class="mnav-link">Top 5 Guides</a>
+    <a href="#about" class="mnav-link">About</a>
+    <a href="#signup" class="mnav-link">Sign Up</a>
+    <a href="#quiz" class="mnav-cta">Take the Quiz</a>
   </div>
 </div>
+
+<!-- Hero -->
+<main>
 <section class="hero" aria-label="Hero">
   <div class="hero-inner">
-    <div class="hero-badge reveal"><span class="badge-dot" aria-hidden="true"></span>Toronto's #1 Supplement Finder</div>
-    <h1 class="hero-h1 reveal d1"><span class="h1-gold">Find</span> Your<br><span class="h1-outline">Perfect</span><br>Protein.</h1>
+    <div class="hero-badge reveal">
+      <span class="badge-dot" aria-hidden="true"></span>
+      Toronto's #1 Supplement Finder
+    </div>
+    <h1 class="hero-h1 reveal d1">
+      <span class="h1-gold">Find</span> Your<br>
+      <span class="h1-outline">Perfect</span><br>
+      Protein.
+    </h1>
     <p class="hero-sub reveal d2">Answer 5 quick questions and we'll match you with the exact supplements your body needs — backed by peer-reviewed science, every pick purchasable on Amazon.ca.</p>
     <div class="hero-btns reveal d3">
-      <a href="#quiz" class="btn-p">Start the Quiz <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="#quiz" class="btn-p">
+        Start the Quiz
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
       <a href="#products" class="btn-s">Browse Products</a>
     </div>
     <div class="hero-stats reveal d4">
-      <div class="hstat"><div class="hstat-v">2,400+</div><div class="hstat-l">Products Reviewed</div></div>
-      <div class="hstat"><div class="hstat-v">18k</div><div class="hstat-l">Happy Customers</div></div>
-      <div class="hstat"><div class="hstat-v">100%</div><div class="hstat-l">Toronto-Rooted</div></div>
+      <div class="hstat">
+        <div class="hstat-v">2,400+</div>
+        <div class="hstat-l">Products Reviewed</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-v">18k</div>
+        <div class="hstat-l">Happy Customers</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-v">100%</div>
+        <div class="hstat-l">Toronto-Rooted</div>
+      </div>
     </div>
   </div>
-  <div class="scroll-hint" aria-hidden="true"><span>Scroll</span><div class="scroll-line"></div></div>
+  <div class="scroll-hint" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
 </section>
+
+<!-- Marquee -->
 <div class="marquee" aria-hidden="true">
   <div class="m-track">
-    <div class="m-item"><span class="m-dot"></span>Optimum Nutrition</div><div class="m-item"><span class="m-dot"></span>Dymatize</div>
-    <div class="m-item"><span class="m-dot"></span>Garden of Life</div><div class="m-item"><span class="m-dot"></span>NOW Foods</div>
-    <div class="m-item"><span class="m-dot"></span>Nordic Naturals</div><div class="m-item"><span class="m-dot"></span>Transparent Labs</div>
-    <div class="m-item"><span class="m-dot"></span>Thorne</div><div class="m-item"><span class="m-dot"></span>Ghost</div>
-    <div class="m-item"><span class="m-dot"></span>Cellucor</div><div class="m-item"><span class="m-dot"></span>Vital Proteins</div>
-    <div class="m-item"><span class="m-dot"></span>Nature Made</div>
-    <div class="m-item"><span class="m-dot"></span>Optimum Nutrition</div><div class="m-item"><span class="m-dot"></span>Dymatize</div>
-    <div class="m-item"><span class="m-dot"></span>Garden of Life</div><div class="m-item"><span class="m-dot"></span>NOW Foods</div>
-    <div class="m-item"><span class="m-dot"></span>Nordic Naturals</div><div class="m-item"><span class="m-dot"></span>Transparent Labs</div>
-    <div class="m-item"><span class="m-dot"></span>Thorne</div><div class="m-item"><span class="m-dot"></span>Ghost</div>
-    <div class="m-item"><span class="m-dot"></span>Cellucor</div><div class="m-item"><span class="m-dot"></span>Vital Proteins</div>
-    <div class="m-item"><span class="m-dot"></span>Nature Made</div>
+    <div class="m-item"><span class="m-dot"></span>Optimum Nutrition</div>
+    <div class="m-item"><span class="m-dot"></span>Dymatize</div>
+    <div class="m-item"><span class="m-dot"></span>Garden of Life</div>
+    <div class="m-item"><span class="m-dot"></span>NOW Foods</div>
+    <div class="m-item"><span class="m-dot"></span>Nordic Naturals</div>
+    <div class="m-item"><span class="m-dot"></span>Legion</div>
+    <div class="m-item"><span class="m-dot"></span>Thorne</div>
+    <div class="m-item"><span class="m-dot"></span>Alani Nu</div>
+    <div class="m-item"><span class="m-dot"></span>Cellucor</div>
+    <div class="m-item"><span class="m-dot"></span>Vital Proteins</div>
+    <div class="m-item"><span class="m-dot"></span>Jamieson</div>
+    <!-- Duplicate for seamless loop -->
+    <div class="m-item"><span class="m-dot"></span>Optimum Nutrition</div>
+    <div class="m-item"><span class="m-dot"></span>Dymatize</div>
+    <div class="m-item"><span class="m-dot"></span>Garden of Life</div>
+    <div class="m-item"><span class="m-dot"></span>NOW Foods</div>
+    <div class="m-item"><span class="m-dot"></span>Nordic Naturals</div>
+    <div class="m-item"><span class="m-dot"></span>Legion</div>
+    <div class="m-item"><span class="m-dot"></span>Thorne</div>
+    <div class="m-item"><span class="m-dot"></span>Alani Nu</div>
+    <div class="m-item"><span class="m-dot"></span>Cellucor</div>
+    <div class="m-item"><span class="m-dot"></span>Vital Proteins</div>
+    <div class="m-item"><span class="m-dot"></span>Jamieson</div>
   </div>
 </div>
+
+<!-- Quiz -->
 <section class="quiz-s" id="quiz" aria-labelledby="quiz-h">
   <div class="c">
     <div class="reveal">
@@ -398,11 +743,16 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
           <button class="qopt" type="button" data-val="Boost Energy"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Boost Energy</button>
           <button class="qopt" type="button" data-val="General Wellness"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>General Wellness</button>
         </div>
-        <div class="qprog"><div class="qpbar"><div class="qpfill" id="qpf"></div></div><button class="qnext" type="button" id="qnext">Next &rarr;</button></div>
+        <div class="qprog">
+          <div class="qpbar"><div class="qpfill" id="qpf"></div></div>
+          <button class="qnext" type="button" id="qnext">Next &rarr;</button>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Blog / Top 5 Guides -->
 <section class="blog-s" id="blog" aria-labelledby="blog-h">
   <div class="c">
     <div class="bhdr">
@@ -414,46 +764,59 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
       <a href="#products" class="va reveal d1">Shop All Picks <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
     <div class="bgrid">
-      <button class="bcard reveal d1" type="button" data-article="protein" aria-label="Read: Top 5 Protein Powders">
+      <button class="bcard reveal d1" type="button" data-article="protein" aria-label="Read the guide: Top 5 Protein Powders of 2026 — whey, isolate and plant protein ranked">
         <div class="bimg"><div class="bimg-inner" style="background:linear-gradient(135deg,#163d61,#1e6080)"></div><span class="bimg-badge">Guide 01</span></div>
-        <div class="bcont"><div class="bcat-row"><span class="bcat">Protein Powders</span><span class="bpeer">18 studies</span></div>
-        <h3 class="btitle">Top 5 Protein Powders of 2026: Whey, Isolate &amp; Plant</h3>
-        <p class="bexc">Protein quality comes down to leucine content, digestibility (DIAAS) and third-party testing. We ranked the five best-value powders on Amazon.ca against those criteria.</p>
-        <div class="bmeta"><span>June 24, 2026</span><span class="bmdot"></span><span>11 min read</span></div>
-        <span class="blink">Read Guide <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
+        <div class="bcont">
+          <div class="bcat-row"><span class="bcat">Protein Powders</span><span class="bpeer">18 studies</span></div>
+          <h3 class="btitle">Top 5 Protein Powders of 2026: Whey, Isolate &amp; Plant</h3>
+          <p class="bexc">Protein quality comes down to leucine content, digestibility (DIAAS) and third-party testing. We ranked the five best-value powders on Amazon.ca against those criteria.</p>
+          <div class="bmeta"><span>June 24, 2026</span><span class="bmdot"></span><span>11 min read</span></div>
+          <span class="blink">Read Guide <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
       </button>
-      <button class="bcard reveal d2" type="button" data-article="vitamins" aria-label="Read: Top 5 Vitamins and Omega-3s">
+      <button class="bcard reveal d2" type="button" data-article="vitamins" aria-label="Read the guide: Top 5 Vitamins and Omega-3s every Torontonian should own">
         <div class="bimg"><div class="bimg-inner" style="background:linear-gradient(135deg,#17b8c8,#0f92a0)"></div><span class="bimg-badge">Guide 02</span></div>
-        <div class="bcont"><div class="bcat-row"><span class="bcat">Vitamins &amp; Omega</span><span class="bpeer">24 studies</span></div>
-        <h3 class="btitle">Top 5 Vitamins &amp; Omega-3s Every Torontonian Should Own</h3>
-        <p class="bexc">80% of Canadians are vitamin D insufficient by late winter. Here are the five evidence-backed daily essentials — and the exact USP/IFOS-verified products to buy.</p>
-        <div class="bmeta"><span>June 17, 2026</span><span class="bmdot"></span><span>9 min read</span></div>
-        <span class="blink">Read Guide <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
+        <div class="bcont">
+          <div class="bcat-row"><span class="bcat">Vitamins &amp; Omega</span><span class="bpeer">24 studies</span></div>
+          <h3 class="btitle">Top 5 Vitamins &amp; Omega-3s Every Torontonian Should Own</h3>
+          <p class="bexc">80% of Canadians are vitamin D insufficient by late winter. Here are the five evidence-backed daily essentials — and the exact USP/IFOS-verified products to buy.</p>
+          <div class="bmeta"><span>June 17, 2026</span><span class="bmdot"></span><span>9 min read</span></div>
+          <span class="blink">Read Guide <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
       </button>
-      <button class="bcard reveal d3" type="button" data-article="performance" aria-label="Read: Top 5 Pre-Workout and Performance">
+      <button class="bcard reveal d3" type="button" data-article="performance" aria-label="Read the guide: Top 5 pre-workouts, clinically dosed">
         <div class="bimg"><div class="bimg-inner" style="background:linear-gradient(135deg,#1e0a0a,#7a1515)"></div><span class="bimg-badge">Guide 03</span></div>
-        <div class="bcont"><div class="bcat-row"><span class="bcat">Performance</span><span class="bpeer">16 studies</span></div>
-        <h3 class="btitle">Top 5 Pre-Workouts: Clinically Dosed, No Fairy Dust</h3>
-        <p class="bexc">Caffeine, citrulline and beta-alanine have the strongest evidence for training performance. We found the five formulas that actually dose them properly.</p>
-        <div class="bmeta"><span>June 11, 2026</span><span class="bmdot"></span><span>10 min read</span></div>
-        <span class="blink">Read Guide <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
+        <div class="bcont">
+          <div class="bcat-row"><span class="bcat">Performance</span><span class="bpeer">16 studies</span></div>
+          <h3 class="btitle">Top 5 Pre-Workouts: Clinically Dosed, No Fairy Dust</h3>
+          <p class="bexc">Caffeine, citrulline and beta-alanine have the strongest evidence for training performance. We found the five formulas that actually dose them properly.</p>
+          <div class="bmeta"><span>June 11, 2026</span><span class="bmdot"></span><span>10 min read</span></div>
+          <span class="blink">Read Guide <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
       </button>
-      <button class="bcard reveal d4" type="button" data-article="recovery" aria-label="Read: Top 5 Recovery Supplements">
+      <button class="bcard reveal d4" type="button" data-article="recovery" aria-label="Read the guide: Top 5 recovery supplements — creatine, EAAs and more">
         <div class="bimg"><div class="bimg-inner" style="background:linear-gradient(135deg,#0a1a2e,#2a8ab8)"></div><span class="bimg-badge">Guide 04</span></div>
-        <div class="bcont"><div class="bcat-row"><span class="bcat">Recovery</span><span class="bpeer">20 studies</span></div>
-        <h3 class="btitle">Top 5 Recovery Supplements: Creatine, EAAs &amp; More</h3>
-        <p class="bexc">Recovery is where consistency pays off. From the most-researched supplement in existence (creatine) to magnesium for sleep — the five picks worth your money.</p>
-        <div class="bmeta"><span>June 5, 2026</span><span class="bmdot"></span><span>10 min read</span></div>
-        <span class="blink">Read Guide <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
+        <div class="bcont">
+          <div class="bcat-row"><span class="bcat">Recovery</span><span class="bpeer">20 studies</span></div>
+          <h3 class="btitle">Top 5 Recovery Supplements: Creatine, EAAs &amp; More</h3>
+          <p class="bexc">Recovery is where consistency pays off. From the most-researched supplement in existence (creatine) to magnesium for sleep — the five picks worth your money.</p>
+          <div class="bmeta"><span>June 5, 2026</span><span class="bmdot"></span><span>10 min read</span></div>
+          <span class="blink">Read Guide <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
       </button>
     </div>
   </div>
 </section>
+
+<!-- Products -->
 <section class="prod-s" id="products" aria-labelledby="prod-h">
   <div class="c">
     <div class="prod-hdr">
-      <div class="reveal"><div class="stag"><span class="stag-l"></span>Every Top 5 Pick</div><h2 class="sh" id="prod-h">Shop the<br><span class="tgold">Science-Backed 20</span></h2></div>
-      <div class="filters reveal d1" id="filters" role="group" aria-label="Filter products">
+      <div class="reveal">
+        <div class="stag"><span class="stag-l"></span>Every Top 5 Pick</div>
+        <h2 class="sh" id="prod-h">Shop the<br><span class="tgold">Science-Backed 20</span></h2>
+      </div>
+      <div class="filters reveal d1" id="filters" role="group" aria-label="Filter products by category">
         <button class="fb active" type="button" data-filter="all">All</button>
         <button class="fb" type="button" data-filter="protein">Protein</button>
         <button class="fb" type="button" data-filter="vitamins">Vitamins</button>
@@ -462,31 +825,224 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
       </div>
     </div>
     <div class="pgrid" id="pgrid">
-      <article class="pcard reveal d1" data-cat="protein"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#163d61,#2a8ab8)">WHEY</div><div class="ptag">Best Seller</div></div><div class="pinfo"><div class="pbrand">Optimum Nutrition</div><div class="pname">Gold Standard 100% Whey</div><div class="pstars" aria-label="4.9 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(4,812)</span></div><div class="pdesc">24g of whey-isolate-primary protein per scoop with ~5.5g BCAAs. The benchmark every other protein is measured against.</div><div class="pfoot"><div class="pprice">$64.99 <span>/ 2lb</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=Optimum+Nutrition+Gold+Standard+100%25+Whey" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d2" data-cat="protein"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#3a1d5e,#6d3fae)">ISO</div><div class="ptag">Low Lactose</div></div><div class="pinfo"><div class="pbrand">Dymatize</div><div class="pname">ISO100 Hydrolyzed Whey Isolate</div><div class="pstars" aria-label="4.8 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(9,140)</span></div><div class="pdesc">25g fast-digesting hydrolyzed isolate, ~0g sugar and near-zero lactose. Informed-Choice tested for banned substances.</div><div class="pfoot"><div class="pprice">$79.99 <span>/ 3lb</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=Dymatize+ISO100+Hydrolyzed+Whey+Protein+Isolate" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d3" data-cat="protein"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#1a3d1a,#3d7a3d)">PLANT</div><div class="ptag" style="background:var(--green-accent);color:#fff">Vegan</div></div><div class="pinfo"><div class="pbrand">Garden of Life</div><div class="pname">Sport Organic Plant Protein</div><div class="pstars" aria-label="4.7 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(2,134)</span></div><div class="pdesc">30g complete plant protein from organic peas &amp; navy beans, plus BCAAs. NSF Certified for Sport &amp; USDA Organic.</div><div class="pfoot"><div class="pprice">$52.99 <span>/ 1.9lb</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=Garden+of+Life+Sport+Organic+Plant+Based+Protein" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d1" data-cat="protein"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#0f4c4c,#17b8c8)">ISO</div><div class="ptag" style="background:var(--green-accent);color:#fff">Value</div></div><div class="pinfo"><div class="pbrand">NOW Sports</div><div class="pname">Whey Protein Isolate</div><div class="pstars" aria-label="4.7 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(1,502)</span></div><div class="pdesc">25g isolate per scoop with minimal additives. Informed-Sport certified and one of the lowest costs-per-gram on Amazon.ca.</div><div class="pfoot"><div class="pprice">$42.99 <span>/ 1.2lb</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=NOW+Sports+Whey+Protein+Isolate" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d2" data-cat="protein"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#1a1a1a,#3d3d3d)">WHEY</div></div><div class="pinfo"><div class="pbrand">Myprotein</div><div class="pname">Impact Whey Protein</div><div class="pstars" aria-label="4.6 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(3,388)</span></div><div class="pdesc">21g protein per serving across 40+ flavours. Informed-Choice tested and consistently the best price-per-serving whey.</div><div class="pfoot"><div class="pprice">$44.99 <span>/ 2.2lb</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=Myprotein+Impact+Whey+Protein" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d1" data-cat="vitamins"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#17b8c8,#0f92a0)">D3+K2</div><div class="ptag">Winter Pick</div></div><div class="pinfo"><div class="pbrand">NOW Foods</div><div class="pname">Vitamin D3 &amp; K2</div><div class="pstars" aria-label="4.8 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(3,211)</span></div><div class="pdesc">1000 IU D3 paired with 45mcg MK-4 K2 for calcium metabolism. Essential for Torontonians through the low-sunlight months.</div><div class="pfoot"><div class="pprice">$22.99 <span>/ 120 caps</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=NOW+Foods+Vitamin+D3+K2" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d2" data-cat="vitamins"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#163d61,#17b8c8)">OMGA</div><div class="ptag">IFOS 5&#9733;</div></div><div class="pinfo"><div class="pbrand">Nordic Naturals</div><div class="pname">Ultimate Omega</div><div class="pstars" aria-label="4.8 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(2,943)</span></div><div class="pdesc">1280mg omega-3 (EPA/DHA) in triglyceride form for superior absorption. Third-party IFOS-tested for purity.</div><div class="pfoot"><div class="pprice">$44.99 <span>/ 60 soft</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=Nordic+Naturals+Ultimate+Omega" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d3" data-cat="vitamins"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#c9902a,#f0c14b)">D3</div><div class="ptag" style="background:var(--green-accent);color:#fff">USP</div></div><div class="pinfo"><div class="pbrand">Nature Made</div><div class="pname">Vitamin D3 2000 IU</div><div class="pstars" aria-label="4.8 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(6,720)</span></div><div class="pdesc">A simple, USP-verified 2000 IU (50mcg) D3 softgel — the deficiency-correcting dose most Canadians actually need in winter.</div><div class="pfoot"><div class="pprice">$14.99 <span>/ 250 soft</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=Nature+Made+Vitamin+D3+2000+IU" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d1" data-cat="vitamins"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#7a4d15,#c9902a)">MULTI</div></div><div class="pinfo"><div class="pbrand">Nature Made</div><div class="pname">Multivitamin Complete</div><div class="pstars" aria-label="4.7 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(5,061)</span></div><div class="pdesc">23 key nutrients as an insurance-policy base. USP-verified for potency so what's on the label is what's in the tablet.</div><div class="pfoot"><div class="pprice">$19.99 <span>/ 130 tabs</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=Nature+Made+Multi+Complete+Multivitamin" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d2" data-cat="vitamins"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#0f4c4c,#2a8ab8)">OMGA</div><div class="ptag" style="background:var(--green-accent);color:#fff">Value</div></div><div class="pinfo"><div class="pbrand">Sports Research</div><div class="pname">Triple Strength Omega-3</div><div class="pstars" aria-label="4.7 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(28,410)</span></div><div class="pdesc">1250mg fish oil with 900mg EPA/DHA per softgel — a higher-potency, lower-cost omega alternative. IFOS certified.</div><div class="pfoot"><div class="pprice">$34.99 <span>/ 90 soft</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=Sports+Research+Triple+Strength+Omega+3+Fish+Oil" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d1" data-cat="performance"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#1e0a0a,#7a1515)">PRE</div><div class="ptag" style="background:#7a1515">Fully Dosed</div></div><div class="pinfo"><div class="pbrand">Transparent Labs</div><div class="pname">BULK Pre-Workout</div><div class="pstars" aria-label="4.9 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(1,876)</span></div><div class="pdesc">No proprietary blends: 8g citrulline malate, 4g beta-alanine, 200mg caffeine. Every dose is at or above the clinical threshold.</div><div class="pfoot"><div class="pprice">$59.99 <span>/ 30 srv</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=Transparent+Labs+Bulk+Pre+Workout" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d2" data-cat="performance"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#163d61,#2a8ab8)">PRE</div><div class="ptag">Best Seller</div></div><div class="pinfo"><div class="pbrand">Optimum Nutrition</div><div class="pname">Gold Standard Pre-Workout</div><div class="pstars" aria-label="4.6 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(7,204)</span></div><div class="pdesc">175mg caffeine plus 3g creatine and 1.5g beta-alanine. A balanced, beginner-friendly stimulant dose that won't wreck sleep.</div><div class="pfoot"><div class="pprice">$39.99 <span>/ 30 srv</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=Optimum+Nutrition+Gold+Standard+Pre+Workout" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d3" data-cat="performance"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#2a0a3d,#7a1fb0)">PRE</div><div class="ptag" style="background:#7a1fb0">Flavour King</div></div><div class="pinfo"><div class="pbrand">Ghost</div><div class="pname">Legend Pre-Workout</div><div class="pstars" aria-label="4.7 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(4,190)</span></div><div class="pdesc">Fully transparent label with 4g L-citrulline, 3.2g beta-alanine and 202mg caffeine. Known for genuinely great flavours.</div><div class="pfoot"><div class="pprice">$54.99 <span>/ 25 srv</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=Ghost+Legend+Pre+Workout" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d1" data-cat="performance"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#7a1515,#d11f1f)">PRE</div><div class="ptag" style="background:var(--green-accent);color:#fff">Value</div></div><div class="pinfo"><div class="pbrand">Cellucor</div><div class="pname">C4 Original Pre-Workout</div><div class="pstars" aria-label="4.6 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(41,300)</span></div><div class="pdesc">150mg caffeine and 1.6g beta-alanine at an entry-level price. The best-selling pre-workout for a reason — reliable and gentle.</div><div class="pfoot"><div class="pprice">$32.99 <span>/ 30 srv</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=Cellucor+C4+Original+Pre+Workout" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d2" data-cat="performance"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#0a3d2e,#1f8a5e)">CIT</div><div class="ptag" style="background:var(--green-accent);color:#fff">Stim-Free</div></div><div class="pinfo"><div class="pbrand">Nutricost</div><div class="pname">L-Citrulline Malate</div><div class="pstars" aria-label="4.6 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(2,010)</span></div><div class="pdesc">Pure 2:1 citrulline malate powder for blood flow and endurance — add 6-8g to any stack. Third-party tested, no stimulants.</div><div class="pfoot"><div class="pprice">$27.99 <span>/ 100 srv</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=Nutricost+L-Citrulline+Malate" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d1" data-cat="recovery"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#0a1a2e,#1a4a7a)">CRTN</div><div class="ptag">Most Studied</div></div><div class="pinfo"><div class="pbrand">Optimum Nutrition</div><div class="pname">Micronized Creatine Monohydrate</div><div class="pstars" aria-label="4.8 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(5,012)</span></div><div class="pdesc">5g pure creatine monohydrate per serving — the most-researched supplement in sports science. No fillers, dissolves clean.</div><div class="pfoot"><div class="pprice">$29.99 <span>/ 400g</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=Optimum+Nutrition+Micronized+Creatine+Monohydrate" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d2" data-cat="recovery"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#1a2e0a,#4a7a1a)">CRTN</div><div class="ptag" style="background:#3d7a3d">NSF Sport</div></div><div class="pinfo"><div class="pbrand">Thorne</div><div class="pname">Creatine (Creapure)</div><div class="pstars" aria-label="4.8 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(3,644)</span></div><div class="pdesc">5g of German Creapure creatine, NSF Certified for Sport — the standard for drug-tested athletes who need banned-substance assurance.</div><div class="pfoot"><div class="pprice">$46.99 <span>/ 90 srv</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=Thorne+Creatine+NSF+Certified+for+Sport" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d3" data-cat="recovery"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#3d2e0a,#a07a1a)">EAA</div></div><div class="pinfo"><div class="pbrand">Optimum Nutrition</div><div class="pname">Amino Energy (EAAs)</div><div class="pstars" aria-label="4.7 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(23,880)</span></div><div class="pdesc">5g amino blend (EAAs + BCAAs) with 100mg caffeine from green tea/coffee for intra-workout sipping and recovery support.</div><div class="pfoot"><div class="pprice">$34.99 <span>/ 65 srv</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=Optimum+Nutrition+Amino+Energy" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d1" data-cat="recovery"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#1a2e3d,#2a6a8a)">MAG</div><div class="ptag" style="background:var(--green-accent);color:#fff">Sleep</div></div><div class="pinfo"><div class="pbrand">NOW Foods</div><div class="pname">Magnesium Glycinate</div><div class="pstars" aria-label="4.7 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(4,455)</span></div><div class="pdesc">Highly-absorbable chelated magnesium to support muscle relaxation, nerve function and sleep quality after hard training days.</div><div class="pfoot"><div class="pprice">$24.99 <span>/ 180 tabs</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=NOW+Foods+Magnesium+Glycinate" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
-      <article class="pcard reveal d2" data-cat="recovery"><div class="pimg"><div class="ppill" style="background:linear-gradient(160deg,#3d1a2e,#8a2a5e)">COLL</div><div class="ptag" style="background:#8a2a5e">Joints</div></div><div class="pinfo"><div class="pbrand">Vital Proteins</div><div class="pname">Collagen Peptides</div><div class="pstars" aria-label="4.6 out of 5 stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(84,200)</span></div><div class="pdesc">20g grass-fed collagen peptides. Emerging evidence supports 10-15g pre-exercise for connective-tissue and joint recovery.</div><div class="pfoot"><div class="pprice">$49.99 <span>/ 20oz</span></div><a class="pbuy" href="https://www.amazon.ca/s?k=Vital+Proteins+Collagen+Peptides" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></article>
+
+      <!-- PROTEIN -->
+      <article class="pcard reveal d1" data-cat="protein">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/71UwaEaQBXL._SL400_.jpg" alt="Optimum Nutrition Gold Standard 100% Whey protein powder tub, 2.27kg — best-selling whey protein in Canada" loading="lazy" width="400" height="400"><div class="ptag">Best Seller</div></div>
+        <div class="pinfo">
+          <div class="pbrand">Optimum Nutrition</div>
+          <div class="pname">Gold Standard 100% Whey</div>
+          <div class="pstars" aria-label="Rated 4.9 out of 5 stars from 4,812 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(4,812)</span></div>
+          <div class="pdesc">24g of whey-isolate-primary protein per scoop with ~5.5g BCAAs. The benchmark every other protein is measured against.</div>
+          <div class="pfoot"><div class="pprice">$128.29 <span>/ 2.27kg</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B000GISU1M?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy Optimum Nutrition Gold Standard 100% Whey on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+      <article class="pcard reveal d2" data-cat="protein">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/81dCh2H3dZL._SL400_.jpg" alt="Dymatize ISO100 hydrolyzed whey protein isolate powder — low lactose, Informed-Choice tested" loading="lazy" width="400" height="400"><div class="ptag">Low Lactose</div></div>
+        <div class="pinfo">
+          <div class="pbrand">Dymatize</div>
+          <div class="pname">ISO100 Hydrolyzed Whey Isolate</div>
+          <div class="pstars" aria-label="Rated 4.8 out of 5 stars from 9,140 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(9,140)</span></div>
+          <div class="pdesc">25g fast-digesting hydrolyzed isolate, ~0g sugar and near-zero lactose. Informed-Choice tested for banned substances.</div>
+          <div class="pfoot"><div class="pprice">$199.97 <span>/ 2.3kg</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B002N6F2UW?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy Dymatize ISO100 hydrolyzed whey isolate on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+      <article class="pcard reveal d3" data-cat="protein">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/713CBrvcBjL._SL400_.jpg" alt="Garden of Life Sport Organic Plant Based Protein powder, chocolate, 840g — vegan pea protein" loading="lazy" width="400" height="400"><div class="ptag" style="background:var(--green-accent);color:#fff">Vegan</div></div>
+        <div class="pinfo">
+          <div class="pbrand">Garden of Life</div>
+          <div class="pname">Sport Organic Plant Protein</div>
+          <div class="pstars" aria-label="Rated 4.3 out of 5 stars from 187 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(187)</span></div>
+          <div class="pdesc">30g complete plant protein from organic pea protein with 5.5g BCAAs, plus organic turmeric, tart cherry and 2 billion CFU probiotics. Vegan, no added sugars.</div>
+          <div class="pfoot"><div class="pprice">$50.39 <span>/ 840g</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B07FQW2PGQ?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy Garden of Life Sport Organic Plant Protein on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+      <article class="pcard reveal d1" data-cat="protein">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/716nxMRwoKL._SL400_.jpg" alt="NOW Sports Whey Protein Isolate unflavoured powder — 25g isolate, Informed-Sport certified" loading="lazy" width="400" height="400"></div>
+        <div class="pinfo">
+          <div class="pbrand">NOW Sports</div>
+          <div class="pname">Whey Protein Isolate</div>
+          <div class="pstars" aria-label="Rated 4.7 out of 5 stars from 1,502 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(1,502)</span></div>
+          <div class="pdesc">25g isolate per scoop with minimal additives. Informed-Sport certified and one of the lowest costs-per-gram on Amazon.ca.</div>
+          <div class="pfoot"><div class="pprice">$155.19 <span>/ 2.27kg</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B0FCHRNY83?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy NOW Sports Whey Protein Isolate on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+      <article class="pcard reveal d2" data-cat="protein">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/71bFjzvx-SL._SL400_.jpg" alt="Pure Protein Whey Protein Powder — 25g protein per scoop, low sugar, budget whey" loading="lazy" width="400" height="400"><div class="ptag" style="background:var(--green-accent);color:#fff">Value</div></div>
+        <div class="pinfo">
+          <div class="pbrand">Pure Protein</div>
+          <div class="pname">Whey Protein Powder</div>
+          <div class="pstars" aria-label="Rated 4.4 out of 5 stars from 3,235 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(3,235)</span></div>
+          <div class="pdesc">25g of whey protein per scoop with just 2g sugar and low fat. Comfortably the cheapest quality whey in this guide per serving.</div>
+          <div class="pfoot"><div class="pprice">$21.84 <span>/ tub</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B00BMHB5JA?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy Pure Protein Whey Protein Powder on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+
+      <!-- VITAMINS -->
+      <article class="pcard reveal d1" data-cat="vitamins">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/71kyJMCZKvL._SL400_.jpg" alt="NOW Supplements Vitamin D-3 and K-2 capsules — 1000 IU D3 with 45mcg K2 for Canadian winters" loading="lazy" width="400" height="400"><div class="ptag">Winter Pick</div></div>
+        <div class="pinfo">
+          <div class="pbrand">NOW Foods</div>
+          <div class="pname">Vitamin D3 &amp; K2</div>
+          <div class="pstars" aria-label="Rated 4.8 out of 5 stars from 3,211 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(3,211)</span></div>
+          <div class="pdesc">1000 IU D3 paired with 45mcg MK-4 K2 for calcium metabolism. Essential for Torontonians through the low-sunlight months.</div>
+          <div class="pfoot"><div class="pprice">$14.47 <span>/ 120 caps</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B00J3888HW?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy NOW Foods Vitamin D3 and K2 on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+      <article class="pcard reveal d2" data-cat="vitamins">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/5161YCcORwL._SL400_.jpg" alt="Nordic Naturals Ultimate Omega fish oil softgels — 1280mg EPA and DHA, IFOS 5-star tested" loading="lazy" width="400" height="400"><div class="ptag">IFOS 5★</div></div>
+        <div class="pinfo">
+          <div class="pbrand">Nordic Naturals</div>
+          <div class="pname">Ultimate Omega</div>
+          <div class="pstars" aria-label="Rated 4.8 out of 5 stars from 2,943 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(2,943)</span></div>
+          <div class="pdesc">1280mg omega-3 (EPA/DHA) in triglyceride form for superior absorption. Third-party IFOS-tested for purity.</div>
+          <div class="pfoot"><div class="pprice">$70.19 <span>/ 120 soft</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B00PUX3GDU?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy Nordic Naturals Ultimate Omega on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+      <article class="pcard reveal d3" data-cat="vitamins">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/610+zc5QQsL._SL400_.jpg" alt="Webber Naturals Vitamin D3 2500 IU Extra Strength softgels, 180 count — Canadian brand" loading="lazy" width="400" height="400"><div class="ptag" style="background:var(--green-accent);color:#fff">Canadian</div></div>
+        <div class="pinfo">
+          <div class="pbrand">Webber Naturals</div>
+          <div class="pname">Vitamin D3 2500 IU Extra Strength</div>
+          <div class="pstars" aria-label="Rated 4.7 out of 5 stars from 5,700 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(5,700)</span></div>
+          <div class="pdesc">A simple 2500 IU (62.5mcg) D3 softgel from a Canadian brand — comfortably above the maintenance dose most of us need through a Toronto winter.</div>
+          <div class="pfoot"><div class="pprice">$6.99 <span>/ 180 soft</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B0B3LWGHGD?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy Webber Naturals Vitamin D3 2500 IU on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+      <article class="pcard reveal d1" data-cat="vitamins">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/71l62n0LUSL._SL400_.jpg" alt="Jamieson 100% Complete Multivitamin Max Strength tablets — Canadian daily multivitamin" loading="lazy" width="400" height="400"><div class="ptag" style="background:var(--green-accent);color:#fff">Canadian</div></div>
+        <div class="pinfo">
+          <div class="pbrand">Jamieson</div>
+          <div class="pname">100% Complete Multivitamin</div>
+          <div class="pstars" aria-label="Rated 4.7 out of 5 stars from 579 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(579)</span></div>
+          <div class="pdesc">A full-spectrum daily multi as an insurance-policy base, from Canada's most established supplement brand. Max Strength concentrations of the core vitamins and minerals.</div>
+          <div class="pfoot"><div class="pprice">$19.47 <span>/ bottle</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B0CTP2H5WH?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy Jamieson 100% Complete Multivitamin on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+      <article class="pcard reveal d2" data-cat="vitamins">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/61uoTNIauxL._SL400_.jpg" alt="Sports Research Omega-3 Fish Oil 1250mg softgels — IFOS certified, 90 count" loading="lazy" width="400" height="400"><div class="ptag" style="background:var(--green-accent);color:#fff">Value</div></div>
+        <div class="pinfo">
+          <div class="pbrand">Sports Research</div>
+          <div class="pname">Omega-3 Fish Oil 1250mg</div>
+          <div class="pstars" aria-label="Rated 4.7 out of 5 stars from 28,410 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(28,410)</span></div>
+          <div class="pdesc">1250mg fish oil with 900mg EPA/DHA per softgel — a higher-potency, lower-cost omega alternative. IFOS certified.</div>
+          <div class="pfoot"><div class="pprice">$38.95 <span>/ 90 soft</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B07DX89ZHN?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy Sports Research Omega-3 Fish Oil on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+
+      <!-- PERFORMANCE -->
+      <article class="pcard reveal d1" data-cat="performance">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/71X4xrWcVJL._SL400_.jpg" alt="Legion Pulse pre-workout supplement tub — fully disclosed label, no proprietary blends" loading="lazy" width="400" height="400"><div class="ptag" style="background:#7a1515">Fully Dosed</div></div>
+        <div class="pinfo">
+          <div class="pbrand">Legion</div>
+          <div class="pname">Pulse Pre-Workout</div>
+          <div class="pstars" aria-label="Rated 4.2 out of 5 stars from 6,900 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(6,900)</span></div>
+          <div class="pdesc">A fully disclosed label with no proprietary blends, no artificial sweeteners and no dyes — every ingredient and dose is printed on the tub.</div>
+          <div class="pfoot"><div class="pprice">$59.99 <span>/ tub</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B00QYZ6MLG?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy Legion Pulse pre-workout on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+      <article class="pcard reveal d2" data-cat="performance">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/71AzGR4MnQL._SL400_.jpg" alt="Alani Nu pre-workout powder — 100mg caffeine from coffee beans with L-theanine" loading="lazy" width="400" height="400"><div class="ptag">Best Seller</div></div>
+        <div class="pinfo">
+          <div class="pbrand">Alani Nu</div>
+          <div class="pname">Pre-Workout</div>
+          <div class="pstars" aria-label="Rated 4.4 out of 5 stars from 17,300 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(17,300)</span></div>
+          <div class="pdesc">A gentle 100mg of caffeine from coffee beans, plus citrulline and L-theanine to smooth out the edge. The pick if late-day training or jitters are your concern.</div>
+          <div class="pfoot"><div class="pprice">$39.97 <span>/ tub</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B0D84V1JGH?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy Alani Nu Pre-Workout on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+      <article class="pcard reveal d3" data-cat="performance">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/71FrzHgWNLL._SL400_.jpg" alt="REDCON1 Total War pre-workout powder — 6g citrulline malate and 250mg caffeine" loading="lazy" width="400" height="400"><div class="ptag" style="background:#7a1fb0">High Stim</div></div>
+        <div class="pinfo">
+          <div class="pbrand">REDCON1</div>
+          <div class="pname">Total War Pre-Workout</div>
+          <div class="pstars" aria-label="Rated 4.3 out of 5 stars from 188 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(188)</span></div>
+          <div class="pdesc">6g of citrulline malate and 250mg of caffeine anhydrous, plus beta-alanine. A genuine clinical dose for experienced lifters who want the full effect.</div>
+          <div class="pfoot"><div class="pprice">$47.14 <span>/ 30 srv</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B0913GL8QF?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy REDCON1 Total War pre-workout on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+      <article class="pcard reveal d1" data-cat="performance">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/81C7DIhiwEL._SL400_.jpg" alt="Cellucor C4 Original pre-workout powder — 150mg caffeine and 1.6g beta-alanine, 30 servings" loading="lazy" width="400" height="400"><div class="ptag" style="background:var(--green-accent);color:#fff">Value</div></div>
+        <div class="pinfo">
+          <div class="pbrand">Cellucor</div>
+          <div class="pname">C4 Original Pre-Workout</div>
+          <div class="pstars" aria-label="Rated 4.6 out of 5 stars from 41,300 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(41,300)</span></div>
+          <div class="pdesc">150mg caffeine and 1.6g beta-alanine at an entry-level price. The best-selling pre-workout for a reason — reliable and gentle.</div>
+          <div class="pfoot"><div class="pprice">$34.99 <span>/ 30 srv</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B07D3MW22V?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy Cellucor C4 Original pre-workout on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+      <article class="pcard reveal d2" data-cat="performance">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/61i5TbhHkOL._SL400_.jpg" alt="ALLMAX 2:1 Citrulline Malate unflavoured powder, 300g — stimulant-free pump supplement" loading="lazy" width="400" height="400"><div class="ptag" style="background:var(--green-accent);color:#fff">Stim-Free</div></div>
+        <div class="pinfo">
+          <div class="pbrand">ALLMAX</div>
+          <div class="pname">2:1 Citrulline Malate</div>
+          <div class="pstars" aria-label="Rated 4.6 out of 5 stars from 748 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(748)</span></div>
+          <div class="pdesc">Pure 2:1 citrulline malate powder for blood flow and endurance — scoop 6–8g into any stack. Unflavoured, no stimulants, and made by an Ontario company.</div>
+          <div class="pfoot"><div class="pprice">$31.00 <span>/ 300g</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B078VH1X9J?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy ALLMAX 2:1 Citrulline Malate on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+
+      <!-- RECOVERY -->
+      <article class="pcard reveal d1" data-cat="recovery">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/71L1820GJRL._SL400_.jpg" alt="Optimum Nutrition Micronized Creatine Monohydrate powder, 300g — 5g creatine per serving" loading="lazy" width="400" height="400"><div class="ptag">Most Studied</div></div>
+        <div class="pinfo">
+          <div class="pbrand">Optimum Nutrition</div>
+          <div class="pname">Micronized Creatine Monohydrate</div>
+          <div class="pstars" aria-label="Rated 4.8 out of 5 stars from 5,012 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(5,012)</span></div>
+          <div class="pdesc">5g pure creatine monohydrate per serving — the most-researched supplement in sports science. No fillers, dissolves clean.</div>
+          <div class="pfoot"><div class="pprice">$29.64 <span>/ 300g</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B0DH5PD6MJ?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy Optimum Nutrition Micronized Creatine Monohydrate on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+      <article class="pcard reveal d2" data-cat="recovery">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/51T4pAQ761L._SL400_.jpg" alt="Thorne Creatine micronized creatine monohydrate powder — Creapure, NSF Certified for Sport" loading="lazy" width="400" height="400"><div class="ptag" style="background:#3d7a3d">NSF Sport</div></div>
+        <div class="pinfo">
+          <div class="pbrand">Thorne</div>
+          <div class="pname">Creatine (Creapure)</div>
+          <div class="pstars" aria-label="Rated 4.8 out of 5 stars from 3,644 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(3,644)</span></div>
+          <div class="pdesc">5g of German Creapure creatine, NSF Certified for Sport — the standard for drug-tested athletes who need banned-substance assurance.</div>
+          <div class="pfoot"><div class="pprice">$55.00 <span>/ 90 srv</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B0CNJ22ZCW?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy Thorne Creatine Creapure on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+      <article class="pcard reveal d3" data-cat="recovery">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/71hlxnSSh+L._SL400_.jpg" alt="Optimum Nutrition Amino Energy powder — 5g EAA and BCAA blend with 100mg caffeine" loading="lazy" width="400" height="400"></div>
+        <div class="pinfo">
+          <div class="pbrand">Optimum Nutrition</div>
+          <div class="pname">Amino Energy (EAAs)</div>
+          <div class="pstars" aria-label="Rated 4.7 out of 5 stars from 23,880 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(23,880)</span></div>
+          <div class="pdesc">5g amino blend (EAAs + BCAAs) with 100mg caffeine from green tea/coffee for intra-workout sipping and recovery support.</div>
+          <div class="pfoot"><div class="pprice">$34.46 <span>/ 30 srv</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B008O47SI6?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy Optimum Nutrition Amino Energy on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+      <article class="pcard reveal d1" data-cat="recovery">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/61JjDdn5IVL._SL400_.jpg" alt="NOW Supplements Magnesium Bisglycinate powder — chelated magnesium for sleep and recovery" loading="lazy" width="400" height="400"><div class="ptag" style="background:var(--green-accent);color:#fff">Sleep</div></div>
+        <div class="pinfo">
+          <div class="pbrand">NOW Foods</div>
+          <div class="pname">Magnesium Glycinate</div>
+          <div class="pstars" aria-label="Rated 4.7 out of 5 stars from 4,455 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(4,455)</span></div>
+          <div class="pdesc">Highly-absorbable chelated magnesium to support muscle relaxation, nerve function and sleep quality after hard training days.</div>
+          <div class="pfoot"><div class="pprice">$25.03 <span>/ powder</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B078WV1JH6?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy NOW Foods Magnesium Bisglycinate on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+      <article class="pcard reveal d2" data-cat="recovery">
+        <div class="pimg"><img src="https://m.media-amazon.com/images/I/716UQxBK1tL._SL400_.jpg" alt="Vital Proteins Bovine Collagen Peptides powder, 567g — 20g grass-fed collagen for joints" loading="lazy" width="400" height="400"><div class="ptag" style="background:#8a2a5e">Joints</div></div>
+        <div class="pinfo">
+          <div class="pbrand">Vital Proteins</div>
+          <div class="pname">Collagen Peptides</div>
+          <div class="pstars" aria-label="Rated 4.6 out of 5 stars from 84,200 reviews"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="prc">(84,200)</span></div>
+          <div class="pdesc">20g grass-fed collagen peptides. Emerging evidence supports 10–15g pre-exercise for connective-tissue and joint recovery.</div>
+          <div class="pfoot"><div class="pprice">$47.99 <span>/ 567g</span></div><a class="pbuy" href="https://www.amazon.ca/dp/B0145N1HH2?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Buy Vital Proteins Collagen Peptides on Amazon.ca">Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+        </div>
+      </article>
+
     </div>
-    <p class="affnote reveal"><strong>Affiliate &amp; pricing disclosure:</strong> Buy buttons open a search on Amazon.ca for the exact product. As an Amazon Associate, Protein Bros may earn from qualifying purchases — this never affects our rankings. Prices shown are approximate and set by Amazon sellers; confirm the live price on Amazon before buying.</p>
-    <div style="text-align:center;margin-top:34px" class="reveal"><a href="https://www.amazon.ca/s?k=protein+supplements" target="_blank" rel="noopener noreferrer nofollow sponsored" class="btn-p" style="display:inline-flex">Browse More on Amazon.ca <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+    <p class="affnote reveal"><strong>Affiliate &amp; pricing disclosure:</strong> Buy buttons link directly to each product's listing on Amazon.ca. As an Amazon Associate, Protein Bros may earn from qualifying purchases — this never affects our rankings. Prices shown were last verified on 1 August 2026, are set by Amazon sellers and change frequently; confirm the live price on Amazon before buying.</p>
+    <div style="text-align:center;margin-top:34px" class="reveal">
+      <a href="https://www.amazon.ca/s?k=protein+supplements&amp;tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored" class="btn-p" style="display:inline-flex">Browse More on Amazon.ca <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+    </div>
   </div>
 </section>
+
+<!-- Features -->
 <section class="feat-s" aria-labelledby="feat-h">
   <div class="c">
     <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto">
@@ -494,40 +1050,74 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
       <h2 class="sh light" id="feat-h">Science-Backed.<br><span class="tgold">Toronto-Trusted.</span></h2>
     </div>
     <div class="fgrid">
-      <div class="fcard reveal d1"><div class="ficon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><h3 class="ft">Third-Party Tested</h3><p class="fd">Every product we recommend has been independently tested for purity, potency, and label accuracy. What the label says is what you get.</p></div>
-      <div class="fcard reveal d2"><div class="ficon"><svg viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div><h3 class="ft">Personalized to You</h3><p class="fd">Our quiz eliminates overwhelm. No generic lists — a curated stack built for your specific goals, diet, and lifestyle.</p></div>
-      <div class="fcard reveal d3"><div class="ficon"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div><h3 class="ft">Made for Toronto</h3><p class="fd">Built by Torontonians who understand our climate and our grind. Recommendations that actually account for Canadian winters.</p></div>
-      <div class="fcard reveal d1"><div class="ficon"><svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3 class="ft">Best Price on Amazon</h3><p class="fd">We link every pick straight to Amazon.ca so you get fast Prime shipping and can compare live prices before you commit.</p></div>
-      <div class="fcard reveal d2"><div class="ficon"><svg viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></div><h3 class="ft">Education First</h3><p class="fd">Every recommendation comes with a clear explanation of why it was chosen. We teach you, not just sell to you.</p></div>
-      <div class="fcard reveal d3"><div class="ficon"><svg viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div><h3 class="ft">Community-Driven</h3><p class="fd">18,000+ Toronto fitness enthusiasts share honest reviews. Real results from real people in your city.</p></div>
+      <div class="fcard reveal d1"><div class="ficon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><h3 class="ft">Third-Party Tested</h3><p class="fd">Every product we recommend has been independently tested for purity, potency, and label accuracy. What the label says is what you get.</p></div>
+      <div class="fcard reveal d2"><div class="ficon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div><h3 class="ft">Personalized to You</h3><p class="fd">Our quiz eliminates overwhelm. No generic lists — a curated stack built for your specific goals, diet, and lifestyle.</p></div>
+      <div class="fcard reveal d3"><div class="ficon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div><h3 class="ft">Made for Toronto</h3><p class="fd">Built by Torontonians who understand our climate and our grind. Recommendations that actually account for Canadian winters.</p></div>
+      <div class="fcard reveal d1"><div class="ficon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3 class="ft">Best Price on Amazon</h3><p class="fd">We link every pick straight to Amazon.ca so you get fast Prime shipping and can compare live prices before you commit.</p></div>
+      <div class="fcard reveal d2"><div class="ficon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></div><h3 class="ft">Education First</h3><p class="fd">Every recommendation comes with a clear explanation of why it was chosen. We teach you, not just sell to you.</p></div>
+      <div class="fcard reveal d3"><div class="ficon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div><h3 class="ft">Community-Driven</h3><p class="fd">18,000+ Toronto fitness enthusiasts share honest reviews. Real results from real people in your city.</p></div>
     </div>
   </div>
 </section>
+
+<!-- About -->
 <section class="about-s" id="about" aria-labelledby="about-h">
   <div class="c">
     <div class="agrid">
       <div class="avis reveal-l">
-        <div class="amap"><div class="amap-inner">
-          <svg class="skyline" width="300" height="110" viewBox="0 0 400 110" fill="none" aria-hidden="true"><rect x="10" y="55" width="20" height="55" fill="white"/><rect x="35" y="36" width="25" height="74" fill="white"/><rect x="65" y="46" width="18" height="64" fill="white"/><rect x="88" y="26" width="22" height="84" fill="white"/><rect x="115" y="16" width="8" height="94" fill="white"/><rect x="112" y="16" width="14" height="5" fill="white"/><rect x="130" y="42" width="30" height="68" fill="white"/><rect x="165" y="52" width="20" height="58" fill="white"/><rect x="190" y="32" width="28" height="78" fill="white"/><rect x="224" y="46" width="22" height="64" fill="white"/><rect x="251" y="36" width="18" height="74" fill="white"/><rect x="275" y="55" width="25" height="55" fill="white"/><rect x="305" y="42" width="20" height="68" fill="white"/><rect x="330" y="52" width="15" height="58" fill="white"/><rect x="350" y="32" width="30" height="78" fill="white"/><rect x="0" y="106" width="400" height="4" fill="white" opacity=".25"/></svg>
-          <div class="apin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
-          <div class="acity">Toronto, Ontario</div>
-        </div></div>
-        <div class="afloat"><div class="afloat-v">2019</div><div class="afloat-l">Founded in the 6ix</div></div>
+        <div class="amap">
+          <div class="amap-inner">
+            <svg class="skyline" width="300" height="110" viewBox="0 0 400 110" fill="none" aria-hidden="true">
+              <rect x="10" y="55" width="20" height="55" fill="white"/>
+              <rect x="35" y="36" width="25" height="74" fill="white"/>
+              <rect x="65" y="46" width="18" height="64" fill="white"/>
+              <rect x="88" y="26" width="22" height="84" fill="white"/>
+              <rect x="115" y="16" width="8" height="94" fill="white"/>
+              <rect x="112" y="16" width="14" height="5" fill="white"/>
+              <rect x="130" y="42" width="30" height="68" fill="white"/>
+              <rect x="165" y="52" width="20" height="58" fill="white"/>
+              <rect x="190" y="32" width="28" height="78" fill="white"/>
+              <rect x="224" y="46" width="22" height="64" fill="white"/>
+              <rect x="251" y="36" width="18" height="74" fill="white"/>
+              <rect x="275" y="55" width="25" height="55" fill="white"/>
+              <rect x="305" y="42" width="20" height="68" fill="white"/>
+              <rect x="330" y="52" width="15" height="58" fill="white"/>
+              <rect x="350" y="32" width="30" height="78" fill="white"/>
+              <rect x="0" y="106" width="400" height="4" fill="white" opacity=".25"/>
+            </svg>
+            <div class="apin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+            <div class="acity">Toronto, Ontario</div>
+          </div>
+        </div>
+        <div class="afloat">
+          <div class="afloat-v">2019</div>
+          <div class="afloat-l">Founded in the 6ix</div>
+        </div>
       </div>
       <div class="acontent">
-        <div class="reveal-r"><div class="stag"><span class="stag-l"></span>Our Story</div><h2 class="sh" id="about-h">Built by Bros.<br>For <span class="tgold">Every Body.</span></h2></div>
+        <div class="reveal-r">
+          <div class="stag"><span class="stag-l"></span>Our Story</div>
+          <h2 class="sh" id="about-h">Built by Bros.<br>For <span class="tgold">Every Body.</span></h2>
+        </div>
         <p class="atxt reveal-r d1">We started Protein Bros in 2019 out of a GoodLife locker room argument over which protein powder was actually worth buying. Six years later, we've reviewed over 2,400 products so you don't have to waste money on expensive chalk.</p>
         <p class="atxt reveal-r d2">We're Torontonians — we get that your supplement needs in January are different than in July. We cut through the marketing noise with honest, science-backed recommendations, and we link every pick straight to Amazon.ca so buying is simple.</p>
         <div class="avals reveal-r d3">
-          <div class="aval"><div class="avicon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><div><div class="avt">No sponsored bias</div><div class="avd">We don't take money to rank products higher. Every recommendation is earned, not bought.</div></div></div>
-          <div class="aval"><div class="avicon"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><div><div class="avt">Always current</div><div class="avd">Our database is updated monthly with new products, reformulations, and updated lab results.</div></div></div>
+          <div class="aval"><div class="avicon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><div><div class="avt">No sponsored bias</div><div class="avd">We don't take money to rank products higher. Every recommendation is earned, not bought.</div></div></div>
+          <div class="aval"><div class="avicon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><div><div class="avt">Always current</div><div class="avd">Our database is updated monthly with new products, reformulations, and updated lab results.</div></div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Testimonials -->
 <section class="test-s" aria-labelledby="test-h">
-  <div class="c"><div class="reveal" style="text-align:center"><div class="stag" style="justify-content:center"><span class="stag-l"></span>Real Reviews<span class="stag-l"></span></div><h2 class="sh light" id="test-h">18,000+ Happy <span class="tgold">Torontonians</span></h2></div></div>
+  <div class="c">
+    <div class="reveal" style="text-align:center">
+      <div class="stag" style="justify-content:center"><span class="stag-l"></span>Real Reviews<span class="stag-l"></span></div>
+      <h2 class="sh light" id="test-h">18,000+ Happy <span class="tgold">Torontonians</span></h2>
+    </div>
+  </div>
   <div class="ttrack-wrap" aria-hidden="true">
     <div class="ttrack">
       <div class="tcard"><div class="tstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="ttxt">"The quiz recommended me a stack I'd never have found on my own. Lost 18 lbs in 3 months while keeping all my muscle."</p><div class="tauthor"><div class="tavatar">JM</div><div><div class="tname">Jordan M.</div><div class="tloc">Scarborough, Toronto</div></div></div></div>
@@ -536,6 +1126,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
       <div class="tcard"><div class="tstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="ttxt">"As a vegan athlete I always struggled to find quality plant protein. Protein Bros pointed me exactly where to go. No fluff."</p><div class="tauthor"><div class="tavatar">AT</div><div><div class="tname">Aisha T.</div><div class="tloc">Etobicoke, Toronto</div></div></div></div>
       <div class="tcard"><div class="tstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="ttxt">"Saved $80/month by switching to the brands they actually recommended. Same results, way less money. Love this site."</p><div class="tauthor"><div class="tavatar">RC</div><div><div class="tname">Ryan C.</div><div class="tloc">Brampton</div></div></div></div>
       <div class="tcard"><div class="tstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="ttxt">"The quiz took 2 minutes and was shockingly accurate. Even flagged a supplement I was taking that conflicted with my medication."</p><div class="tauthor"><div class="tavatar">MO</div><div><div class="tname">Maria O.</div><div class="tloc">East York, Toronto</div></div></div></div>
+      <!-- Duplicate for seamless loop -->
       <div class="tcard"><div class="tstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="ttxt">"The quiz recommended me a stack I'd never have found on my own. Lost 18 lbs in 3 months while keeping all my muscle."</p><div class="tauthor"><div class="tavatar">JM</div><div><div class="tname">Jordan M.</div><div class="tloc">Scarborough, Toronto</div></div></div></div>
       <div class="tcard"><div class="tstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="ttxt">"Finally a Canadian site that doesn't just repost American recommendations. The vitamin D suggestion was a game-changer for my winters."</p><div class="tauthor"><div class="tavatar">SP</div><div><div class="tname">Sarah P.</div><div class="tloc">North York, Toronto</div></div></div></div>
       <div class="tcard"><div class="tstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="ttxt">"I've been lifting for 10 years and still learned something new from their Top 5 guides. The creatine section alone is worth bookmarking."</p><div class="tauthor"><div class="tavatar">DK</div><div><div class="tname">Dev K.</div><div class="tloc">Mississauga</div></div></div></div>
@@ -545,6 +1136,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     </div>
   </div>
 </section>
+
+<!-- Signup / Subscribe -->
 <section class="auth-s" id="signup" aria-labelledby="signup-h">
   <div class="auth-grid">
     <div class="auth-copy reveal-l">
@@ -557,35 +1150,60 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
         <div class="auth-li"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Unsubscribe in one click. We never sell your data.</span></div>
       </div>
     </div>
+
     <div class="auth-card reveal-r d1">
       <div class="auth-card-t">Create your free account</div>
       <div class="auth-card-s">Subscribe to updates &amp; save your quiz results.</div>
+
       <button class="gbtn" type="button" id="googleBtn" aria-label="Continue with Google">
-        <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+          <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+          <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+          <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+        </svg>
         Continue with Google
       </button>
+
       <div class="auth-div">or</div>
+
       <form class="auth-form" id="signupForm" novalidate>
-        <div class="auth-field"><label for="su-name">Name</label><input id="su-name" name="name" type="text" placeholder="Alex from Toronto" autocomplete="name" maxlength="80"></div>
-        <div class="auth-field"><label for="su-email">Email</label><input id="su-email" name="email" type="email" placeholder="your@email.com" autocomplete="email" maxlength="120" required></div>
-        <div class="checkrow"><input id="su-consent" type="checkbox" required><label for="su-consent">I agree to receive email updates and accept the Privacy Policy. (CASL compliant — unsubscribe anytime.)</label></div>
+        <div class="auth-field">
+          <label for="su-name">Name</label>
+          <input id="su-name" name="name" type="text" placeholder="Alex from Toronto" autocomplete="name" maxlength="80">
+        </div>
+        <div class="auth-field">
+          <label for="su-email">Email</label>
+          <input id="su-email" name="email" type="email" placeholder="your@email.com" autocomplete="email" maxlength="120" required>
+        </div>
+        <div class="checkrow">
+          <input id="su-consent" type="checkbox" required>
+          <label for="su-consent">I agree to receive email updates and accept the Privacy Policy. (CASL compliant — unsubscribe anytime.)</label>
+        </div>
         <button class="auth-submit" type="submit" id="signupSubmit">Subscribe for Free</button>
         <p class="auth-msg" id="signupMsg" role="status" aria-live="polite"></p>
       </form>
+
       <p class="auth-note">Demo build: the Google button and email form validate and confirm on-page. To go live, connect a Google OAuth Client ID and an email backend (e.g. Mailchimp/Supabase). <a href="#about">Learn how we handle data</a>.</p>
     </div>
   </div>
 </section>
+</main>
+
+<!-- Footer -->
 <footer class="footer">
   <div class="c">
     <div class="fgr">
       <div class="fbrand">
-        <div class="flogo"><div class="flogomark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div><span class="fbname">Protein<span>Bros</span></span></div>
+        <div class="flogo">
+          <div class="flogomark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div>
+          <span class="fbname">Protein<span>Bros</span></span>
+        </div>
         <p class="fbtag">Toronto's trusted supplement finder. Science-backed, community-driven, zero BS. Every pick shoppable on Amazon.ca.</p>
         <div class="fsoc">
-          <a href="#" class="fsb" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-          <a href="#" class="fsb" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.72a8.18 8.18 0 004.79 1.53V6.79a4.85 4.85 0 01-1.02-.1z"/></svg></a>
-          <a href="#" class="fsb" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+          <a href="#" class="fsb" aria-label="Protein Bros on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="#" class="fsb" aria-label="Protein Bros on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.72a8.18 8.18 0 004.79 1.53V6.79a4.85 4.85 0 01-1.02-.1z"/></svg></a>
+          <a href="#" class="fsb" aria-label="Protein Bros on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
         </div>
       </div>
       <div><div class="fct">Discover</div><nav class="flinks" aria-label="Discover"><a href="#quiz">Supplement Finder</a><a href="#products">Shop All</a><a href="#blog">Top 5 Guides</a><a href="#signup">Deal Alerts</a></nav></div>
@@ -598,68 +1216,318 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     </div>
   </div>
 </footer>
+
+<!-- Article Modal -->
 <div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-labelledby="artHeading" aria-hidden="true">
   <div class="amodal-bg" data-close></div>
   <div class="amodal-panel">
     <button class="amodal-x" type="button" data-close aria-label="Close article">&#x2715;</button>
     <div class="amodal-body" id="amodalBody">
+
+      <!-- ARTICLE: PROTEIN -->
       <article class="art" data-art="protein">
-        <div class="art-head"><div class="art-tag">Protein Powders <span class="bpeer">18 studies</span></div><h2 class="art-h" id="artHeading">Top 5 Protein Powders of 2026: Whey, Isolate &amp; Plant, Ranked by the Science</h2><div class="art-meta"><span>Protein Bros Research Desk</span><span class="bmdot"></span><span>Updated June 24, 2026</span><span class="bmdot"></span><span>11 min read</span></div></div>
+        <div class="art-head">
+          <div class="art-tag">Protein Powders <span class="bpeer">18 studies</span></div>
+          <h2 class="art-h" id="artHeading">Top 5 Protein Powders of 2026: Whey, Isolate &amp; Plant, Ranked by the Science</h2>
+          <div class="art-meta"><span>Protein Bros Research Desk</span><span class="bmdot"></span><span>Updated June 24, 2026</span><span class="bmdot"></span><span>11 min read</span></div>
+        </div>
         <div class="art-content">
           <p class="art-lead">The protein powder aisle is a marketing warzone. Strip away the hype and only three things determine whether a powder builds muscle: total protein per dollar, leucine content (the amino acid that triggers muscle protein synthesis), and whether an independent lab has verified what's actually in the tub.</p>
-          <p>The evidence here is unusually settled. Meta-analyses show that once you hit roughly 1.6 g of protein per kg of bodyweight per day, the source matters far less than the total — but higher-leucine, higher-digestibility proteins (measured by the DIAAS score) make hitting that target easier.</p>
+          <p>The evidence here is unusually settled. Meta-analyses show that once you hit roughly 1.6 g of protein per kg of bodyweight per day, the <em>source</em> matters far less than the total — but higher-leucine, higher-digestibility proteins (measured by the DIAAS score) make hitting that target easier. Whey scores highest on DIAAS; modern plant blends now close most of the gap by combining pea and other proteins. Below are the five we'd actually buy on Amazon.ca.</p>
+
           <div class="art-sub">The Rankings</div>
-          <div class="pick"><div class="pick-rank">1</div><div class="pick-body"><div class="pick-brand">Optimum Nutrition</div><div class="pick-name">Gold Standard 100% Whey</div><p class="pick-desc">The reference standard. 24g protein and ~2.7g of leucine per scoop — comfortably above the ~2-3g leucine threshold that maximally stimulates muscle protein synthesis.</p><div class="pick-foot"><span class="pick-spec">24g protein · ~120 kcal · from $64.99/2lb</span><a class="buy" href="https://www.amazon.ca/s?k=Optimum+Nutrition+Gold+Standard+100%25+Whey" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <div class="pick"><div class="pick-rank">2</div><div class="pick-body"><div class="pick-brand">Dymatize</div><div class="pick-name">ISO100 Hydrolyzed Whey Isolate</div><p class="pick-desc">The pick for anyone who's lactose-sensitive or wants the fastest-digesting option. 25g protein with near-zero lactose. Informed-Choice certified.</p><div class="pick-foot"><span class="pick-spec">25g protein · low lactose · from $79.99/3lb</span><a class="buy" href="https://www.amazon.ca/s?k=Dymatize+ISO100+Hydrolyzed+Whey+Protein+Isolate" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <div class="pick"><div class="pick-rank">3</div><div class="pick-body"><div class="pick-brand">Garden of Life</div><div class="pick-name">Sport Organic Plant-Based Protein</div><p class="pick-desc">The best-evidenced vegan option. A pea + navy bean blend gives a complete amino acid profile with 30g protein and added BCAAs. NSF Certified for Sport and USDA Organic.</p><div class="pick-foot"><span class="pick-spec">30g protein · vegan · from $52.99/1.9lb</span><a class="buy" href="https://www.amazon.ca/s?k=Garden+of+Life+Sport+Organic+Plant+Based+Protein" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <div class="pick"><div class="pick-rank">4</div><div class="pick-body"><div class="pick-brand">NOW Sports</div><div class="pick-name">Whey Protein Isolate</div><p class="pick-desc">The value isolate. 25g of protein with a very short ingredient list and Informed-Sport certification — one of the lowest costs-per-gram on Amazon.ca.</p><div class="pick-foot"><span class="pick-spec">25g protein · minimal additives · from $42.99</span><a class="buy" href="https://www.amazon.ca/s?k=NOW+Sports+Whey+Protein+Isolate" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <div class="pick"><div class="pick-rank">5</div><div class="pick-body"><div class="pick-brand">Myprotein</div><div class="pick-name">Impact Whey Protein</div><p class="pick-desc">The budget champion. 21g protein per serving, 40+ flavours, and Informed-Choice testing — routinely the cheapest quality whey per serving.</p><div class="pick-foot"><span class="pick-spec">21g protein · best price/serving · from $44.99</span><a class="buy" href="https://www.amazon.ca/s?k=Myprotein+Impact+Whey+Protein" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <div class="art-cite"><div class="art-cite-t">Key References</div><ol><li>Morton RW, et al. "A systematic review, meta-analysis and meta-regression of protein supplementation on resistance training-induced gains." Br J Sports Med, 2018.</li><li>Phillips SM. "Dietary protein requirements and adaptive advantages in athletes." Br J Nutr, 2012.</li><li>Gorissen SHM, et al. "Protein content and amino acid composition of commercially available plant-based protein isolates." Amino Acids, 2018.</li></ol></div>
-          <p class="art-disc">Educational content only — not medical advice. Prices are approximate; confirm the live price on Amazon.ca.</p>
+
+          <div class="pick">
+            <div class="pick-rank">1</div>
+            <div class="pick-body">
+              <div class="pick-brand">Optimum Nutrition</div>
+              <div class="pick-name">Gold Standard 100% Whey</div>
+              <p class="pick-desc">The reference standard. 24g protein and ~2.7g of leucine per scoop — comfortably above the ~2–3g leucine threshold that maximally stimulates muscle protein synthesis. Decades on the market, consistent third-party results, and usually the best flavour-to-price ratio.</p>
+              <div class="pick-foot"><span class="pick-spec">24g protein · ~120 kcal · from $128.29/2.27kg</span><a class="buy" href="https://www.amazon.ca/dp/B000GISU1M?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="pick">
+            <div class="pick-rank">2</div>
+            <div class="pick-body">
+              <div class="pick-brand">Dymatize</div>
+              <div class="pick-name">ISO100 Hydrolyzed Whey Isolate</div>
+              <p class="pick-desc">The pick for anyone who's lactose-sensitive or wants the fastest-digesting option. Hydrolyzed isolate delivers 25g protein with near-zero lactose, fat and sugar. Informed-Choice certified, so it's tested for banned substances batch by batch.</p>
+              <div class="pick-foot"><span class="pick-spec">25g protein · low lactose · from $199.97/2.3kg</span><a class="buy" href="https://www.amazon.ca/dp/B002N6F2UW?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="pick">
+            <div class="pick-rank">3</div>
+            <div class="pick-body">
+              <div class="pick-brand">Garden of Life</div>
+              <div class="pick-name">Sport Organic Plant-Based Protein</div>
+              <p class="pick-desc">The best-evidenced vegan option. Organic pea protein delivers a complete amino acid profile with 30g protein and 5.5g of BCAAs, and the formula adds organic turmeric, tart cherry and 2 billion CFU of probiotics for recovery and digestion. Vegan, gluten-free, no added sugars.</p>
+              <div class="pick-foot"><span class="pick-spec">30g protein · vegan · from $50.39/840g</span><a class="buy" href="https://www.amazon.ca/dp/B07FQW2PGQ?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="pick">
+            <div class="pick-rank">4</div>
+            <div class="pick-body">
+              <div class="pick-brand">NOW Sports</div>
+              <div class="pick-name">Whey Protein Isolate</div>
+              <p class="pick-desc">The clean isolate. 25g of protein with a very short ingredient list and Informed-Sport certification. Proof that "clean and effective" doesn't have to mean a long label — though the 2.27kg tub has crept up in price lately, so check the per-gram cost against the smaller sizes.</p>
+              <div class="pick-foot"><span class="pick-spec">25g protein · minimal additives · from $155.19/2.27kg</span><a class="buy" href="https://www.amazon.ca/dp/B0FCHRNY83?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="pick">
+            <div class="pick-rank">5</div>
+            <div class="pick-body">
+              <div class="pick-brand">Pure Protein</div>
+              <div class="pick-name">Whey Protein Powder</div>
+              <p class="pick-desc">The budget champion. 25g of whey protein per scoop with only 2g of sugar and very little fat, at a price no other quality whey on this list comes close to. Ideal if you're going through a tub every couple of weeks and cost-per-shake is your priority.</p>
+              <div class="pick-foot"><span class="pick-spec">25g protein · best price/serving · from $21.84</span><a class="buy" href="https://www.amazon.ca/dp/B00BMHB5JA?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="art-cite">
+            <div class="art-cite-t">Key References</div>
+            <ol>
+              <li>Morton RW, et al. "A systematic review, meta-analysis and meta-regression of protein supplementation on resistance training-induced gains." <em>Br J Sports Med</em>, 2018.</li>
+              <li>Phillips SM. "Dietary protein requirements and adaptive advantages in athletes." <em>Br J Nutr</em>, 2012.</li>
+              <li>Gorissen SHM, et al. "Protein content and amino acid composition of commercially available plant-based protein isolates." <em>Amino Acids</em>, 2018.</li>
+            </ol>
+          </div>
+          <p class="art-disc">Educational content only — not medical advice. Prices last verified 1 August 2026; confirm the live price on Amazon.ca. As an Amazon Associate we may earn from qualifying purchases.</p>
         </div>
       </article>
+
+      <!-- ARTICLE: VITAMINS -->
       <article class="art" data-art="vitamins">
-        <div class="art-head"><div class="art-tag">Vitamins &amp; Omega <span class="bpeer">24 studies</span></div><h2 class="art-h">Top 5 Vitamins &amp; Omega-3s Every Torontonian Should Actually Own</h2><div class="art-meta"><span>Protein Bros Research Desk</span><span class="bmdot"></span><span>Updated June 17, 2026</span><span class="bmdot"></span><span>9 min read</span></div></div>
+        <div class="art-head">
+          <div class="art-tag">Vitamins &amp; Omega <span class="bpeer">24 studies</span></div>
+          <h2 class="art-h">Top 5 Vitamins &amp; Omega-3s Every Torontonian Should Actually Own</h2>
+          <div class="art-meta"><span>Protein Bros Research Desk</span><span class="bmdot"></span><span>Updated June 17, 2026</span><span class="bmdot"></span><span>9 min read</span></div>
+        </div>
         <div class="art-content">
           <p class="art-lead">Most people don't need a cabinet full of pills. They need a small number of nutrients where the evidence is strong and where deficiency is genuinely common — which, at Toronto's latitude, is a very specific short list.</p>
+          <p>Statistics Canada's Canadian Health Measures Survey has repeatedly found that a large share of Canadians fall below adequate vitamin D blood levels in winter, when the sun sits too low to trigger meaningful skin synthesis for months. Omega-3 intake is also low in most Western diets. These five picks target the gaps that matter, and every one carries an independent quality seal (USP or IFOS).</p>
+
           <div class="art-sub">The Rankings</div>
-          <div class="pick"><div class="pick-rank">1</div><div class="pick-body"><div class="pick-brand">NOW Foods</div><div class="pick-name">Vitamin D3 &amp; K2</div><p class="pick-desc">The winter cornerstone. D3 is the form that raises blood levels most effectively, and pairing it with K2 supports directing calcium to bone rather than arteries.</p><div class="pick-foot"><span class="pick-spec">1000 IU D3 + 45mcg K2 · from $22.99</span><a class="buy" href="https://www.amazon.ca/s?k=NOW+Foods+Vitamin+D3+K2" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <div class="pick"><div class="pick-rank">2</div><div class="pick-body"><div class="pick-brand">Nordic Naturals</div><div class="pick-name">Ultimate Omega</div><p class="pick-desc">The gold-standard fish oil. 1280mg of EPA/DHA in triglyceride form, IFOS-tested for oxidation and contaminants.</p><div class="pick-foot"><span class="pick-spec">1280mg EPA/DHA · IFOS 5&#9733; · from $44.99</span><a class="buy" href="https://www.amazon.ca/s?k=Nordic+Naturals+Ultimate+Omega" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <div class="pick"><div class="pick-rank">3</div><div class="pick-body"><div class="pick-brand">Nature Made</div><div class="pick-name">Vitamin D3 2000 IU</div><p class="pick-desc">Simple, USP-verified 2000 IU D3 — the maintenance dose most guidelines cite for correcting winter insufficiency.</p><div class="pick-foot"><span class="pick-spec">2000 IU · USP Verified · from $14.99</span><a class="buy" href="https://www.amazon.ca/s?k=Nature+Made+Vitamin+D3+2000+IU" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <div class="pick"><div class="pick-rank">4</div><div class="pick-body"><div class="pick-brand">Nature Made</div><div class="pick-name">Multivitamin Complete</div><p class="pick-desc">A sensible "insurance policy" for busy weeks. USP-verified multi covers small gaps in 23 nutrients cheaply.</p><div class="pick-foot"><span class="pick-spec">23 nutrients · USP Verified · from $19.99</span><a class="buy" href="https://www.amazon.ca/s?k=Nature+Made+Multi+Complete+Multivitamin" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <div class="pick"><div class="pick-rank">5</div><div class="pick-body"><div class="pick-brand">Sports Research</div><div class="pick-name">Triple Strength Omega-3</div><p class="pick-desc">Higher potency per softgel, lower price than premium brands, also IFOS certified.</p><div class="pick-foot"><span class="pick-spec">900mg EPA/DHA per softgel · from $34.99</span><a class="buy" href="https://www.amazon.ca/s?k=Sports+Research+Triple+Strength+Omega+3+Fish+Oil" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <p class="art-disc">Educational content only — not medical advice. Talk to your physician before starting a new supplement.</p>
+
+          <div class="pick">
+            <div class="pick-rank">1</div>
+            <div class="pick-body">
+              <div class="pick-brand">NOW Foods</div>
+              <div class="pick-name">Vitamin D3 &amp; K2</div>
+              <p class="pick-desc">The winter cornerstone. D3 is the form that raises blood levels most effectively, and pairing it with K2 supports directing calcium to bone rather than arteries. A cheap, high-value combination for the low-sunlight months.</p>
+              <div class="pick-foot"><span class="pick-spec">1000 IU D3 + 45mcg K2 · from $14.47</span><a class="buy" href="https://www.amazon.ca/dp/B00J3888HW?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="pick">
+            <div class="pick-rank">2</div>
+            <div class="pick-body">
+              <div class="pick-brand">Nordic Naturals</div>
+              <div class="pick-name">Ultimate Omega</div>
+              <p class="pick-desc">The gold-standard fish oil. 1280mg of EPA/DHA in the triglyceride form, which absorbs better than the cheaper ethyl-ester oils. IFOS-tested for oxidation and contaminants — the two things that separate a good fish oil from a rancid one.</p>
+              <div class="pick-foot"><span class="pick-spec">1100mg EPA/DHA per serving · IFOS 5★ · from $70.19/120ct</span><a class="buy" href="https://www.amazon.ca/dp/B00PUX3GDU?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="pick">
+            <div class="pick-rank">3</div>
+            <div class="pick-body">
+              <div class="pick-brand">Webber Naturals</div>
+              <div class="pick-name">Vitamin D3 2500 IU Extra Strength</div>
+              <p class="pick-desc">If you want D3 without the K2, this is the simplest, best-value option — and at well under ten dollars for 180 softgels it's the cheapest pick in this entire guide. 2500 IU (62.5mcg) sits just above the maintenance dose guidelines cite for correcting winter insufficiency.</p>
+              <div class="pick-foot"><span class="pick-spec">2500 IU · 180 softgels · from $6.99</span><a class="buy" href="https://www.amazon.ca/dp/B0B3LWGHGD?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="pick">
+            <div class="pick-rank">4</div>
+            <div class="pick-body">
+              <div class="pick-brand">Jamieson</div>
+              <div class="pick-name">100% Complete Multivitamin (Max Strength)</div>
+              <p class="pick-desc">A sensible "insurance policy" for busy weeks when your diet slips. It won't outperform whole foods, but a full-spectrum multi covers the small gaps cheaply. Jamieson is the most established supplement brand in Canada and the easiest to find locally if you'd rather buy in person.</p>
+              <div class="pick-foot"><span class="pick-spec">full spectrum · Canadian · from $19.47</span><a class="buy" href="https://www.amazon.ca/dp/B0CTP2H5WH?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="pick">
+            <div class="pick-rank">5</div>
+            <div class="pick-body">
+              <div class="pick-brand">Sports Research</div>
+              <div class="pick-name">Omega-3 Fish Oil 1250mg</div>
+              <p class="pick-desc">The value omega. Higher potency per softgel than most, so you swallow fewer pills, at a lower price than premium brands. Also IFOS certified — a great pick if Nordic Naturals stretches the budget.</p>
+              <div class="pick-foot"><span class="pick-spec">1250mg fish oil per softgel · from $38.95/90ct</span><a class="buy" href="https://www.amazon.ca/dp/B07DX89ZHN?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="art-cite">
+            <div class="art-cite-t">Key References</div>
+            <ol>
+              <li>Statistics Canada. "Vitamin D blood levels of Canadians," Canadian Health Measures Survey.</li>
+              <li>Tripkovic L, et al. "Comparison of vitamin D2 and D3 supplementation in raising serum 25-hydroxyvitamin D status." <em>Am J Clin Nutr</em>, 2012.</li>
+              <li>Dyerberg J, et al. "Bioavailability of marine n-3 fatty acid formulations." <em>Prostaglandins Leukot Essent Fatty Acids</em>, 2010.</li>
+            </ol>
+          </div>
+          <p class="art-disc">Educational content only — not medical advice. Talk to your physician before starting a new supplement, especially if you take medication. Prices last verified 1 August 2026; confirm on Amazon.ca.</p>
         </div>
       </article>
+
+      <!-- ARTICLE: PERFORMANCE -->
       <article class="art" data-art="performance">
-        <div class="art-head"><div class="art-tag">Performance <span class="bpeer">16 studies</span></div><h2 class="art-h">Top 5 Pre-Workouts: Clinically Dosed, No Fairy Dust</h2><div class="art-meta"><span>Protein Bros Research Desk</span><span class="bmdot"></span><span>Updated June 11, 2026</span><span class="bmdot"></span><span>10 min read</span></div></div>
+        <div class="art-head">
+          <div class="art-tag">Performance <span class="bpeer">16 studies</span></div>
+          <h2 class="art-h">Top 5 Pre-Workouts: Clinically Dosed, No Fairy Dust</h2>
+          <div class="art-meta"><span>Protein Bros Research Desk</span><span class="bmdot"></span><span>Updated June 11, 2026</span><span class="bmdot"></span><span>10 min read</span></div>
+        </div>
         <div class="art-content">
           <p class="art-lead">Most pre-workouts fail for one reason: "proprietary blends" that hide fairy-dust doses too small to do anything. Only a handful of ingredients have strong performance evidence — and they all have a threshold dose you have to hit.</p>
+          <p>The three with the best data are caffeine (3–6 mg/kg improves power, endurance and focus), L-citrulline (6–8g improves blood flow and reduces fatigue), and beta-alanine (3.2–6.4g/day buffers muscle acidity over weeks — the harmless tingle is just a side effect). We ranked formulas that dose these transparently and properly.</p>
+
           <div class="art-sub">The Rankings</div>
-          <div class="pick"><div class="pick-rank">1</div><div class="pick-body"><div class="pick-brand">Transparent Labs</div><div class="pick-name">BULK Pre-Workout</div><p class="pick-desc">The benchmark for honest dosing. 8g citrulline malate, 4g beta-alanine and 200mg caffeine — every key ingredient at or above clinical threshold.</p><div class="pick-foot"><span class="pick-spec">8g citrulline · 4g beta-alanine · from $59.99</span><a class="buy" href="https://www.amazon.ca/s?k=Transparent+Labs+Bulk+Pre+Workout" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <div class="pick"><div class="pick-rank">2</div><div class="pick-body"><div class="pick-brand">Optimum Nutrition</div><div class="pick-name">Gold Standard Pre-Workout</div><p class="pick-desc">Moderate 175mg caffeine plus 3g creatine and 1.5g beta-alanine — balanced and won't wreck sleep.</p><div class="pick-foot"><span class="pick-spec">175mg caffeine · 3g creatine · from $39.99</span><a class="buy" href="https://www.amazon.ca/s?k=Optimum+Nutrition+Gold+Standard+Pre+Workout" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <div class="pick"><div class="pick-rank">3</div><div class="pick-body"><div class="pick-brand">Ghost</div><div class="pick-name">Legend Pre-Workout</div><p class="pick-desc">Fully transparent label with 4g L-citrulline, 3.2g beta-alanine (full clinical dose) and ~202mg caffeine.</p><div class="pick-foot"><span class="pick-spec">3.2g beta-alanine · 202mg caffeine · from $54.99</span><a class="buy" href="https://www.amazon.ca/s?k=Ghost+Legend+Pre+Workout" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <div class="pick"><div class="pick-rank">4</div><div class="pick-body"><div class="pick-brand">Cellucor</div><div class="pick-name">C4 Original Pre-Workout</div><p class="pick-desc">150mg caffeine and 1.6g beta-alanine — gentle entry point, perfect if you're caffeine-sensitive or just starting out.</p><div class="pick-foot"><span class="pick-spec">150mg caffeine · beginner-friendly · from $32.99</span><a class="buy" href="https://www.amazon.ca/s?k=Cellucor+C4+Original+Pre+Workout" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <div class="pick"><div class="pick-rank">5</div><div class="pick-body"><div class="pick-brand">Nutricost</div><div class="pick-name">L-Citrulline Malate (stim-free)</div><p class="pick-desc">Pure citrulline malate lets you add a full 6-8g clinical dose to any stack or train stimulant-free in the evening.</p><div class="pick-foot"><span class="pick-spec">pure citrulline · no stimulants · from $27.99</span><a class="buy" href="https://www.amazon.ca/s?k=Nutricost+L-Citrulline+Malate" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <p class="art-disc">Educational content only. Watch your total daily caffeine. Prices are approximate; confirm on Amazon.ca.</p>
+
+          <div class="pick">
+            <div class="pick-rank">1</div>
+            <div class="pick-body">
+              <div class="pick-brand">Legion</div>
+              <div class="pick-name">Pulse Pre-Workout</div>
+              <p class="pick-desc">The benchmark for honest dosing. Legion built its reputation on a fully disclosed label — every ingredient and its exact dose is printed on the tub, with zero proprietary blends, no artificial sweeteners and no food dyes. If you want to verify what you're taking against the research yourself, this is the one that lets you.</p>
+              <div class="pick-foot"><span class="pick-spec">fully disclosed label · no blends · from $59.99</span><a class="buy" href="https://www.amazon.ca/dp/B00QYZ6MLG?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="pick">
+            <div class="pick-rank">2</div>
+            <div class="pick-body">
+              <div class="pick-brand">Alani Nu</div>
+              <div class="pick-name">Pre-Workout</div>
+              <p class="pick-desc">The best "sensible" option. Just 100mg of caffeine sourced from coffee beans — roughly a single cup — plus citrulline for blood flow and L-theanine to take the edge off. A real lift without the jittery over-stimulation of 300mg+ products, and the one to reach for if you train after work.</p>
+              <div class="pick-foot"><span class="pick-spec">100mg caffeine · + L-theanine · from $39.97</span><a class="buy" href="https://www.amazon.ca/dp/B0D84V1JGH?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="pick">
+            <div class="pick-rank">3</div>
+            <div class="pick-body">
+              <div class="pick-brand">REDCON1</div>
+              <div class="pick-name">Total War Pre-Workout</div>
+              <p class="pick-desc">The heaviest hitter here: 6g of citrulline malate — right in the 6–8g clinical window — plus beta-alanine and 250mg of caffeine anhydrous. This is the one that actually clears every threshold discussed above, but treat 250mg with respect and keep it well away from bedtime.</p>
+              <div class="pick-foot"><span class="pick-spec">6g citrulline malate · 250mg caffeine · from $47.14</span><a class="buy" href="https://www.amazon.ca/dp/B0913GL8QF?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="pick">
+            <div class="pick-rank">4</div>
+            <div class="pick-body">
+              <div class="pick-brand">Cellucor</div>
+              <div class="pick-name">C4 Original Pre-Workout</div>
+              <p class="pick-desc">The gateway pre-workout, and still a solid value. 150mg caffeine and 1.6g beta-alanine make it a gentle entry point — lower doses than the top picks, but perfect if you're caffeine-sensitive or just starting out.</p>
+              <div class="pick-foot"><span class="pick-spec">150mg caffeine · beginner-friendly · from $34.99/30srv</span><a class="buy" href="https://www.amazon.ca/dp/B07D3MW22V?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="pick">
+            <div class="pick-rank">5</div>
+            <div class="pick-body">
+              <div class="pick-brand">ALLMAX</div>
+              <div class="pick-name">2:1 Citrulline Malate (stim-free)</div>
+              <p class="pick-desc">The build-your-own option. Pure 2:1 citrulline malate lets you add a full 6–8g clinical dose to any stack — or train stimulant-free in the evening. The most cost-effective way to get the pump-and-endurance ingredient without a pre-mixed formula, and ALLMAX is based in Ontario.</p>
+              <div class="pick-foot"><span class="pick-spec">2:1 malate · no stimulants · from $31.00/300g</span><a class="buy" href="https://www.amazon.ca/dp/B078VH1X9J?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="art-cite">
+            <div class="art-cite-t">Key References</div>
+            <ol>
+              <li>Grgic J, et al. "Wake up and smell the coffee: caffeine supplementation and exercise performance." <em>Br J Sports Med</em>, 2020.</li>
+              <li>Trexler ET, et al. (ISSN) "International society of sports nutrition position stand: Beta-Alanine." <em>J Int Soc Sports Nutr</em>, 2015.</li>
+              <li>Gonzalez AM &amp; Trexler ET. "Effects of citrulline supplementation on exercise performance." <em>J Strength Cond Res</em>, 2020.</li>
+            </ol>
+          </div>
+          <p class="art-disc">Educational content only — not medical advice. Watch your total daily caffeine and avoid late-day stimulants if you value sleep. Prices last verified 1 August 2026; confirm on Amazon.ca.</p>
         </div>
       </article>
+
+      <!-- ARTICLE: RECOVERY -->
       <article class="art" data-art="recovery">
-        <div class="art-head"><div class="art-tag">Recovery <span class="bpeer">20 studies</span></div><h2 class="art-h">Top 5 Recovery Supplements: Creatine, EAAs, Magnesium &amp; More</h2><div class="art-meta"><span>Protein Bros Research Desk</span><span class="bmdot"></span><span>Updated June 5, 2026</span><span class="bmdot"></span><span>10 min read</span></div></div>
+        <div class="art-head">
+          <div class="art-tag">Recovery <span class="bpeer">20 studies</span></div>
+          <h2 class="art-h">Top 5 Recovery Supplements: Creatine, EAAs, Magnesium &amp; More</h2>
+          <div class="art-meta"><span>Protein Bros Research Desk</span><span class="bmdot"></span><span>Updated June 5, 2026</span><span class="bmdot"></span><span>10 min read</span></div>
+        </div>
         <div class="art-content">
-          <p class="art-lead">Recovery is where results are actually built — training is just the stimulus. The supplements with the strongest recovery evidence are also among the cheapest and safest, led by the single most-studied sports supplement in existence.</p>
+          <p class="art-lead">Recovery is where results are actually built — training is just the stimulus. The good news: the supplements with the strongest recovery evidence are also among the cheapest and safest, led by the single most-studied sports supplement in existence.</p>
+          <p>Creatine monohydrate has hundreds of trials behind it for strength, power and lean mass, with an exceptional safety record; the "kidney damage" and "hair loss" scares don't survive the actual data in healthy people. Alongside it, protein/EAAs drive repair, magnesium supports sleep and muscle function, and collagen has emerging support for connective tissue. Here's the shortlist.</p>
+
           <div class="art-sub">The Rankings</div>
-          <div class="pick"><div class="pick-rank">1</div><div class="pick-body"><div class="pick-brand">Optimum Nutrition</div><div class="pick-name">Micronized Creatine Monohydrate</div><p class="pick-desc">The one supplement almost everyone should take. 5g/day of plain monohydrate — the most evidence-backed, cost-effective performance aid there is.</p><div class="pick-foot"><span class="pick-spec">5g monohydrate · ~$0.30/serving · from $29.99</span><a class="buy" href="https://www.amazon.ca/s?k=Optimum+Nutrition+Micronized+Creatine+Monohydrate" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <div class="pick"><div class="pick-rank">2</div><div class="pick-body"><div class="pick-brand">Thorne</div><div class="pick-name">Creatine (Creapure, NSF Certified for Sport)</div><p class="pick-desc">Same 5g monohydrate dose with NSF Certified for Sport testing and premium German Creapure. The pick for drug-tested athletes.</p><div class="pick-foot"><span class="pick-spec">5g Creapure · NSF Sport · from $46.99</span><a class="buy" href="https://www.amazon.ca/s?k=Thorne+Creatine+NSF+Certified+for+Sport" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <div class="pick"><div class="pick-rank">3</div><div class="pick-body"><div class="pick-brand">Optimum Nutrition</div><div class="pick-name">Amino Energy (EAAs)</div><p class="pick-desc">Essential amino acids drive muscle repair. EAA blend with a light 100mg caffeine — easy to sip through long sessions.</p><div class="pick-foot"><span class="pick-spec">5g amino blend · 100mg caffeine · from $34.99</span><a class="buy" href="https://www.amazon.ca/s?k=Optimum+Nutrition+Amino+Energy" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <div class="pick"><div class="pick-rank">4</div><div class="pick-body"><div class="pick-brand">NOW Foods</div><div class="pick-name">Magnesium Glycinate</div><p class="pick-desc">Many active people run low on magnesium. The glycinate form is gentle on the gut, well-absorbed, and great for sleep quality.</p><div class="pick-foot"><span class="pick-spec">chelated · sleep &amp; muscle · from $24.99</span><a class="buy" href="https://www.amazon.ca/s?k=NOW+Foods+Magnesium+Glycinate" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <div class="pick"><div class="pick-rank">5</div><div class="pick-body"><div class="pick-brand">Vital Proteins</div><div class="pick-name">Collagen Peptides</div><p class="pick-desc">Studies suggest 10-15g collagen with vitamin C before exercise may support tendon and ligament health.</p><div class="pick-foot"><span class="pick-spec">20g/scoop · joints &amp; tendons · from $49.99</span><a class="buy" href="https://www.amazon.ca/s?k=Vital+Proteins+Collagen+Peptides" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div></div></div>
-          <p class="art-disc">Educational content only — not medical advice. Prices are approximate; confirm on Amazon.ca.</p>
+
+          <div class="pick">
+            <div class="pick-rank">1</div>
+            <div class="pick-body">
+              <div class="pick-brand">Optimum Nutrition</div>
+              <div class="pick-name">Micronized Creatine Monohydrate</div>
+              <p class="pick-desc">The one supplement almost everyone should take. 5g/day of plain monohydrate is the most evidence-backed, cost-effective performance aid there is — no need for fancy "HCL" or "buffered" versions. Micronized just means it mixes more easily.</p>
+              <div class="pick-foot"><span class="pick-spec">5g monohydrate · 60 servings · from $29.64/300g</span><a class="buy" href="https://www.amazon.ca/dp/B0DH5PD6MJ?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="pick">
+            <div class="pick-rank">2</div>
+            <div class="pick-body">
+              <div class="pick-brand">Thorne</div>
+              <div class="pick-name">Creatine (Creapure, NSF Certified for Sport)</div>
+              <p class="pick-desc">Same 5g monohydrate dose, but with NSF Certified for Sport testing and premium German Creapure. This is the pick for drug-tested athletes who legally cannot risk a contaminated batch — the certification is the whole value proposition.</p>
+              <div class="pick-foot"><span class="pick-spec">5g per serving · 90 servings · from $55.00</span><a class="buy" href="https://www.amazon.ca/dp/B0CNJ22ZCW?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="pick">
+            <div class="pick-rank">3</div>
+            <div class="pick-body">
+              <div class="pick-brand">Optimum Nutrition</div>
+              <div class="pick-name">Amino Energy (EAAs)</div>
+              <p class="pick-desc">Essential amino acids are what actually drive muscle repair (BCAAs alone are incomplete). This EAA blend with a light 100mg caffeine is an easy way to sip aminos through a long session or a fasted morning workout.</p>
+              <div class="pick-foot"><span class="pick-spec">5g amino blend · 100mg caffeine · from $34.46/30srv</span><a class="buy" href="https://www.amazon.ca/dp/B008O47SI6?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="pick">
+            <div class="pick-rank">4</div>
+            <div class="pick-body">
+              <div class="pick-brand">NOW Foods</div>
+              <div class="pick-name">Magnesium Glycinate</div>
+              <p class="pick-desc">Many active people run low on magnesium, which is central to muscle relaxation, nerve function and sleep quality. The glycinate form is gentle on the gut and well-absorbed — a smart, underrated recovery-and-sleep pick.</p>
+              <div class="pick-foot"><span class="pick-spec">bisglycinate powder · sleep &amp; muscle · from $25.03</span><a class="buy" href="https://www.amazon.ca/dp/B078WV1JH6?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="pick">
+            <div class="pick-rank">5</div>
+            <div class="pick-body">
+              <div class="pick-brand">Vital Proteins</div>
+              <div class="pick-name">Collagen Peptides</div>
+              <p class="pick-desc">The emerging pick for joints and connective tissue. Studies suggest 10–15g of collagen with vitamin C taken ~30–60 min before exercise may support tendon and ligament health — useful if you're managing achy joints alongside hard training.</p>
+              <div class="pick-foot"><span class="pick-spec">bovine peptides · joints &amp; tendons · from $47.99/567g</span><a class="buy" href="https://www.amazon.ca/dp/B0145N1HH2?tag=proteinbros0f-20" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon.ca <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+            </div>
+          </div>
+
+          <div class="art-cite">
+            <div class="art-cite-t">Key References</div>
+            <ol>
+              <li>Kreider RB, et al. (ISSN) "International Society of Sports Nutrition position stand: safety and efficacy of creatine supplementation." <em>J Int Soc Sports Nutr</em>, 2017.</li>
+              <li>Jäger R, et al. (ISSN) "International Society of Sports Nutrition Position Stand: protein and exercise." <em>J Int Soc Sports Nutr</em>, 2017.</li>
+              <li>Shaw G, et al. "Vitamin C-enriched gelatin supplementation before intermittent activity augments collagen synthesis." <em>Am J Clin Nutr</em>, 2017.</li>
+            </ol>
+          </div>
+          <p class="art-disc">Educational content only — not medical advice. Prices last verified 1 August 2026; confirm on Amazon.ca. As an Amazon Associate we may earn from qualifying purchases.</p>
         </div>
       </article>
+
     </div>
   </div>
 </div>
+
 <script>
 'use strict';
 (function () {
@@ -708,6 +1576,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     el.classList.add('selected');
     qans[qstep] = v;
   }
+  // Delegated listener — safe for both initial and re-rendered options
   qoptsEl.addEventListener('click', function (e) {
     var btn = e.target.closest('.qopt');
     if (btn && qoptsEl.contains(btn)) { selOpt(btn, btn.dataset.val || btn.textContent.trim()); }
@@ -755,25 +1624,30 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   function showResult() {
     qcard.style.opacity = '0';
     setTimeout(function () {
+      // Build result UI with DOM APIs — never reflect user answers into innerHTML
       var stack = [
-        { name: 'Gold Standard Whey', price: '$64.99' },
-        { name: 'Micronized Creatine', price: '$29.99' },
-        { name: 'Vitamin D3 + K2', price: '$22.99' }
+        { name: 'Gold Standard Whey', price: '$128.29' },
+        { name: 'Micronized Creatine', price: '$29.64' },
+        { name: 'Vitamin D3 + K2', price: '$14.47' }
       ];
       var wrap = document.createElement('div');
       wrap.style.cssText = 'text-align:center;padding:12px 0';
+
       var iconDiv = document.createElement('div');
       iconDiv.style.cssText = 'width:60px;height:60px;background:rgba(23,184,200,.13);border:1px solid rgba(23,184,200,.28);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px';
       iconDiv.innerHTML = '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#17b8c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>';
       wrap.appendChild(iconDiv);
+
       var h3 = document.createElement('h3');
       h3.style.cssText = "font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#f4f9fc;margin-bottom:10px";
       h3.textContent = 'Your Stack is Ready';
       wrap.appendChild(h3);
+
       var p = document.createElement('p');
       p.style.cssText = 'font-size:.87rem;color:rgba(244,249,252,.45);line-height:1.7;margin-bottom:24px';
       p.textContent = "Based on your answers, we've built your personalized supplement stack.";
       wrap.appendChild(p);
+
       var box = document.createElement('div');
       box.style.cssText = 'background:rgba(23,184,200,.07);border:1px solid rgba(23,184,200,.18);border-radius:12px;padding:18px;margin-bottom:22px;text-align:left';
       var label = document.createElement('div');
@@ -786,7 +1660,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
         var row = document.createElement('div');
         row.style.cssText = 'display:flex;justify-content:space-between;color:#f4f9fc;font-size:.88rem';
         var nameSpan = document.createElement('span');
-        nameSpan.textContent = '\u2022 ' + item.name;
+        nameSpan.textContent = '• ' + item.name;
         var priceSpan = document.createElement('span');
         priceSpan.style.cssText = 'color:#17b8c8;font-weight:600';
         priceSpan.textContent = item.price;
@@ -796,12 +1670,14 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
       });
       box.appendChild(rows);
       wrap.appendChild(box);
+
       var btn = document.createElement('a');
       btn.href = '#products';
       btn.className = 'qnext';
       btn.style.cssText = 'display:inline-block;font-size:.95rem;padding:13px 28px';
-      btn.textContent = 'View Full Results \u2192';
+      btn.textContent = 'View Full Results →';
       wrap.appendChild(btn);
+
       qcard.textContent = '';
       qcard.appendChild(wrap);
       qcard.style.transition = 'opacity .28s ease';
@@ -868,29 +1744,36 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     }
   });
 
-  // ---- Signup ----
+  // ---- Signup: Google demo + email form ----
   var googleBtn = document.getElementById('googleBtn');
   var signupForm = document.getElementById('signupForm');
   var signupMsg = document.getElementById('signupMsg');
   var signupSubmit = document.getElementById('signupSubmit');
+
   function setMsg(text, ok) {
     signupMsg.textContent = text;
     signupMsg.classList.remove('ok', 'err');
     signupMsg.classList.add(ok ? 'ok' : 'err');
   }
+
   googleBtn.addEventListener('click', function () {
-    setMsg('Demo mode: Google sign-in is not wired up yet. Add a Google OAuth Client ID to enable it.', true);
+    // Demo only: no credentials are collected. A real integration would call
+    // Google Identity Services (google.accounts.id) with your OAuth Client ID.
+    setMsg('Demo mode: Google sign-in isn’t wired up yet. Add a Google OAuth Client ID to enable it — no password is ever collected here.', true);
   });
+
   signupForm.addEventListener('submit', function (e) {
     e.preventDefault();
     var emailInput = document.getElementById('su-email');
     var consent = document.getElementById('su-consent');
     var email = emailInput.value.trim();
+    // Basic, safe client-side validation (server-side validation still required in production)
     var valid = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
     if (!valid) { setMsg('Please enter a valid email address.', false); emailInput.focus(); return; }
     if (!consent.checked) { setMsg('Please agree to receive updates to continue.', false); consent.focus(); return; }
     signupSubmit.disabled = true;
     signupSubmit.textContent = "You're in!";
+    // textContent (not innerHTML) — user input is never parsed as HTML
     setMsg('Thanks! Check your inbox to confirm your subscription. (Demo: connect an email backend to send it for real.)', true);
     signupForm.reset();
     setTimeout(function () {
@@ -902,3 +1785,4 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 </script>
 </body>
 </html>
+
