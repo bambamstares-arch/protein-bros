@@ -175,6 +175,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .qopt{padding:15px 18px;border-radius:var(--radius-md);border:1.5px solid rgba(244,249,252,.08);background:rgba(244,249,252,.025);color:rgba(244,249,252,.65);font-size:.88rem;font-weight:500;cursor:pointer;transition:all var(--t);text-align:left;display:flex;flex-direction:column;gap:6px}
 .qopt:hover{border-color:rgba(23,184,200,.38);color:var(--gold);background:rgba(23,184,200,.05)}
 .qopt.selected{border-color:var(--gold);background:rgba(23,184,200,.1);color:var(--gold)}
+.qopts .qopt:last-child:nth-child(odd){grid-column:1 / -1}
 .qopt svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;opacity:.8}
 .qprog{margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .qpbar{flex:1;height:4px;background:rgba(244,249,252,.08);border-radius:4px;overflow:hidden}
@@ -795,8 +796,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     <div class="qgrid">
       <div class="qsteps reveal-l d1" id="qsteps">
         <div class="qstep active" data-s="0"><div class="qnum">1</div><div><div class="qstep-t">Your Goal</div><div class="qstep-d">Build muscle, lose fat, improve energy, or general wellness</div></div></div>
-        <div class="qstep" data-s="1"><div class="qnum">2</div><div><div class="qstep-t">Your Diet</div><div class="qstep-d">Vegan, keto, omnivore — we match your lifestyle</div></div></div>
-        <div class="qstep" data-s="2"><div class="qnum">3</div><div><div class="qstep-t">Activity Level</div><div class="qstep-d">Casual gym-goer to competitive athlete</div></div></div>
+        <div class="qstep" data-s="1"><div class="qnum">2</div><div><div class="qstep-t">Your Diet</div><div class="qstep-d">Vegan, vegetarian, keto — we only show what fits</div></div></div>
+        <div class="qstep" data-s="2"><div class="qnum">3</div><div><div class="qstep-t">Training Frequency</div><div class="qstep-d">Sets how much we recommend, not just what</div></div></div>
         <div class="qstep" data-s="3"><div class="qnum">4</div><div><div class="qstep-t">Budget</div><div class="qstep-d">Value picks to premium formulas</div></div></div>
         <div class="qstep" data-s="4"><div class="qnum">5</div><div><div class="qstep-t">Your Results</div><div class="qstep-d">Personalized product stack with explanations</div></div></div>
       </div>
@@ -2113,8 +2114,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   // ---- Quiz ----
   var qdata = [
     { q: "What's your primary fitness goal?", s: "Choose the one that matters most right now", opts: ["Build Muscle", "Lose Fat", "Boost Energy", "General Wellness"] },
-    { q: "What best describes your diet?", s: "We'll match supplements to your nutrition style", opts: ["Omnivore", "Vegan", "Keto / Low Carb", "Vegetarian"] },
-    { q: "How active are you?", s: "Your training frequency shapes your needs", opts: ["Just Starting Out", "3-4x / Week", "5-6x / Week", "Competitive Athlete"] },
+    { q: "What best describes your diet?", s: "We'll only show you products that fit", opts: ["I eat everything", "Vegetarian", "Vegan", "Keto / Low carb"] },
+    { q: "How often do you train?", s: "This sets how much we recommend", opts: ["Just starting out", "A few times a week", "Competitive athlete"] },
     { q: "What's your monthly supplement budget?", s: "We'll find the best value at every price point", opts: ["Under $50", "$50-$100", "$100-$200", "$200+"] }
   ];
   var qstep = 0, qans = [];
@@ -2252,7 +2253,10 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     { a: 'B07JZ6BJT9', n: 'Organic MCT Oil Powder', c: 'recovery', p: 32.95, d: 'vk', g: 'ef' }
   ];
 
-  var DIET_FLAG = { 'Omnivore': null, 'Vegan': 'v', 'Vegetarian': 't', 'Keto / Low Carb': 'k' };
+  var DIET_FLAG = { 'I eat everything': null, 'Vegan': 'v', 'Vegetarian': 't', 'Keto / Low carb': 'k' };
+  // How many products we recommend, by training frequency. A beginner doesn't need
+  // a five-product stack — protein and creatine cover most of the ground.
+  var ACT_ITEMS = { 'Just starting out': 2, 'A few times a week': 3, 'Competitive athlete': 3 };
   var GOAL_FLAG = { 'Build Muscle': 'm', 'Lose Fat': 'f', 'Boost Energy': 'e', 'General Wellness': 'w' };
   var BUDGET_CAP = { 'Under $50': 50, '$50-$100': 100, '$100-$200': 200, '$200+': 100000 };
   // Which categories matter most, per goal
@@ -2268,7 +2272,13 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     var goalFlag = GOAL_FLAG[goal] || 'w';
     var cap = BUDGET_CAP[budget];
     if (typeof cap !== 'number') { cap = 100000; }
-    var cats = GOAL_CATS[goal] || GOAL_CATS['General Wellness'];
+    var cats = (GOAL_CATS[goal] || GOAL_CATS['General Wellness']).slice();
+    // Competitive athletes get a performance product in place of the lowest-priority
+    // category; beginners get a shorter stack rather than a wall of tubs.
+    if (activity === 'Competitive athlete' && cats.indexOf('performance') === -1) {
+      cats[cats.length - 1] = 'performance';
+    }
+    cats = cats.slice(0, ACT_ITEMS[activity] || 3);
 
     // Eligible = diet-compatible. Rank goal-matching products first, then by price.
     function pool(cat) {
