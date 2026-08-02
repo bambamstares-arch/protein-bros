@@ -2432,6 +2432,15 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     }, 140);
   }
 
+  // Products a keto dieter actively seeks out — near-zero-carb proteins, electrolytes
+  // for the sodium loss that low-carb causes, magnesium, and MCT fat.
+  // Deliberately narrower than the 'k' diet flag above: that one is permissive
+  // (almost every supplement is technically low-carb) and exists for quiz matching,
+  // which would wrongly exclude products if it were this strict.
+  var KETO_PICKS = ['B07JZ6BJT9', 'B084HQ4DYQ', 'B0GKHGRNQS', 'B0BQSZ2J15', 'B0CMJBQFZ1',
+    'B09Y2MCBRZ', 'B07NHLNZXL', 'B002N6F2UW', 'B0FCHRNY83',
+    'B081ZCL53Y', 'B08WVD2YDB', 'B078WV1JH6', 'B0145N1HH2'];
+
   // ---- Tag each card with its diet flags, read from the catalogue by ASIN ----
   var BY_ASIN = {};
   CATALOG.forEach(function (x) { BY_ASIN[x.a] = x; });
@@ -2439,7 +2448,9 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     var link = card.querySelector('.pbuy');
     if (!link) { return; }
     var m = link.getAttribute('href').match(/\/dp\/([A-Z0-9]+)/);
-    if (m && BY_ASIN[m[1]]) { card.dataset.diet = BY_ASIN[m[1]].d; }
+    if (!m) { return; }
+    if (BY_ASIN[m[1]]) { card.dataset.diet = BY_ASIN[m[1]].d; }
+    if (KETO_PICKS.indexOf(m[1]) > -1) { card.dataset.ketoPick = '1'; }
   });
 
   // ---- Product filter ----
@@ -2455,7 +2466,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
       var show;
       if (cat === 'all') { show = true; }
       else if (cat === 'vegan') { show = diet.indexOf('v') > -1; }
-      else if (cat === 'keto') { show = diet.indexOf('k') > -1; }
+      else if (cat === 'keto') { show = c.dataset.ketoPick === '1'; }
       else { show = c.dataset.cat === cat; }
       c.style.transition = 'opacity .22s ease,transform .22s ease';
       c.style.opacity = show ? '1' : '.22';
