@@ -805,8 +805,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
         <div class="qstep active" data-s="0"><div class="qnum">1</div><div><div class="qstep-t">Your Goal</div><div class="qstep-d">Build muscle, lose fat, improve energy, or general wellness</div></div></div>
         <div class="qstep" data-s="1"><div class="qnum">2</div><div><div class="qstep-t">Your Diet</div><div class="qstep-d">Vegan, vegetarian, keto — we only show what fits</div></div></div>
         <div class="qstep" data-s="2"><div class="qnum">3</div><div><div class="qstep-t">Training Frequency</div><div class="qstep-d">Sets how much we recommend, not just what</div></div></div>
-        <div class="qstep" data-s="3"><div class="qnum">4</div><div><div class="qstep-t">Iron &amp; Formulation</div><div class="qstep-d">Some vitamins and minerals differ by sex</div></div></div>
-        <div class="qstep" data-s="4"><div class="qnum">5</div><div><div class="qstep-t">Safety Check</div><div class="qstep-d">Dairy trouble or medication interactions</div></div></div>
+        <div class="qstep" data-s="3"><div class="qnum">4</div><div><div class="qstep-t">Male or Female</div><div class="qstep-d">Iron needs and multivitamins differ</div></div></div>
+        <div class="qstep" data-s="4"><div class="qnum">5</div><div><div class="qstep-t">Anything We Should Know</div><div class="qstep-d">Health conditions that change what's safe</div></div></div>
         <div class="qstep" data-s="5"><div class="qnum">6</div><div><div class="qstep-t">Budget</div><div class="qstep-d">Value picks to premium formulas</div></div></div>
         <div class="qstep" data-s="6"><div class="qnum">7</div><div><div class="qstep-t">Your Results</div><div class="qstep-d">Personalized product stack with explanations</div></div></div>
       </div>
@@ -2128,7 +2128,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     { q: "What best describes your diet?", s: "We'll only show you products that fit", opts: ["I eat everything", "Vegetarian", "Vegan", "Keto / Low carb"] },
     { q: "How often do you train?", s: "This sets how much we recommend", opts: ["Just starting out", "A few times a week", "Competitive athlete"] },
     { q: "Male or female?", s: "Iron needs and multivitamins differ", opts: ["Male", "Female", "Prefer not to say"] },
-    { q: "Anything we should know?", s: "Pick any that apply", opts: ["Dairy upsets my stomach", "I take blood thinners", "Neither applies"], multi: true },
+    { q: "Anything we should know?", s: "Pick any that apply — we'll adjust or flag them", opts: ["Dairy upsets my stomach", "Caffeine sensitive", "I take blood thinners", "High blood pressure", "Kidney or liver condition", "Pregnant or breastfeeding", "None of these"], multi: true },
     { q: "What's your monthly supplement budget?", s: "We'll find the best value at every price point", opts: ["Under $50", "$50-$100", "$100-$200", "$200+"] }
   ];
   var qstep = 0, qans = [];
@@ -2159,9 +2159,9 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     if (qdata[qstep] && qdata[qstep].multi) {
       // Multi-select: toggle, but "Neither applies" is exclusive with the rest
       var cur = Array.isArray(qans[qstep]) ? qans[qstep].slice() : [];
-      var none = 'Neither applies';
-      if (v === none) {
-        cur = cur.indexOf(none) > -1 ? [] : [none];
+      var none = 'None of these';
+      if (v === none || v === 'Neither applies') {
+        cur = cur.indexOf(v) > -1 ? [] : [v];
       } else {
         cur = cur.filter(function (x) { return x !== none; });
         var at = cur.indexOf(v);
@@ -2305,6 +2305,17 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   // Neither is a reason to exclude the product — it's a reason to talk to a doctor.
   var THINNER_WATCH = ['B00J3888HW', 'B00PUX3GDU', 'B07DX89ZHN', 'B0DW4B1B3L',
     'B0842DJJYC', 'B07GKC6XC7', 'B08CLG83BR'];
+  // Anything with meaningful caffeine. Excluded outright if someone says they're
+  // sensitive — a stimulant they can't tolerate is a bad recommendation, not a warning.
+  var CAFFEINATED = ['B0913GL8QF', 'B07D3MW22V', 'B00QYZ6MLG', 'B07SNTQ7QQ',
+    'B06Y2DY9MF', 'B0D84V1JGH', 'B008O47SI6'];
+  // High-sodium electrolytes. LMNT alone is 1000mg per packet.
+  var SODIUM_WATCH = ['B084HQ4DYQ', 'B0BQSZ2J15', 'B0CMJBQFZ1', 'B0GKHGRNQS'];
+  // Creatine and concentrated protein — both routinely raised with impaired kidney
+  // function. Safe in healthy people; a genuine question if function is already reduced.
+  var RENAL_WATCH = ['B0DH5PD6MJ', 'B0CNJ22ZCW', 'B0CHK24CC4', 'B08DH161T6', 'B0GW9J4B1G',
+    'B0DCXQVJX2', 'B0B9YMNYWK', 'B000GISU1M', 'B002N6F2UW', 'B0FCHRNY83', 'B00BMHB5JA',
+    'B09Y2MCBRZ', 'B07NHLNZXL', 'B00NBIUGA2', 'B0787RBSF8'];
   var GOAL_FLAG = { 'Build Muscle': 'm', 'Lose Fat': 'f', 'Boost Energy': 'e', 'General Wellness': 'w' };
   var BUDGET_CAP = { 'Under $50': 50, '$50-$100': 100, '$100-$200': 200, '$200+': 100000 };
   // Which categories matter most, per goal
@@ -2317,8 +2328,9 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 
   function buildStack(goal, diet, activity, budget, sex, flags) {
     flags = flags || [];
-    var noDairy = flags.indexOf('Dairy upsets my stomach') > -1;
-    var onThinners = flags.indexOf('I take blood thinners') > -1;
+    var has = function (f) { return flags.indexOf(f) > -1; };
+    var noDairy = has('Dairy upsets my stomach');
+    var noCaffeine = has('Caffeine sensitive');
     var dietFlag = DIET_FLAG[diet];
     var goalFlag = GOAL_FLAG[goal] || 'w';
     var cap = BUDGET_CAP[budget];
@@ -2337,6 +2349,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
         if (x.c !== cat) { return false; }
         if (dietFlag && x.d.indexOf(dietFlag) === -1) { return false; }
         if (noDairy && DAIRY_HEAVY.indexOf(x.a) > -1) { return false; }
+        if (noCaffeine && CAFFEINATED.indexOf(x.a) > -1) { return false; }
         if (SEX_ONLY[x.a] && sex && sex !== 'Prefer not to say' && SEX_ONLY[x.a] !== sex) { return false; }
         return true;
       }).sort(function (x, y) {
@@ -2372,7 +2385,12 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     // goal-matching pick is the premium one — a $200 budget shouldn't return a $40 stack.
     for (var i = 0; i < chosen.length; i++) {
       var others = chosen.reduce(function (s, it, j) { return j === i ? s : s + it.p; }, 0);
+      var tailored = sex && sex !== 'Prefer not to say';
       var ranked = pools[i].slice().sort(function (x, y) {
+        // A multivitamin matched to the person beats a generic pick in the same slot
+        var xs = tailored && SEX_ONLY[x.a] === sex ? 0 : 1;
+        var ys = tailored && SEX_ONLY[y.a] === sex ? 0 : 1;
+        if (xs !== ys) { return xs - ys; }
         var xg = x.g.indexOf(goalFlag) > -1 ? 0 : 1;
         var yg = y.g.indexOf(goalFlag) > -1 ? 0 : 1;
         if (xg !== yg) { return xg - yg; }
@@ -2388,9 +2406,46 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
       total: chosen.reduce(function (s, i) { return s + i.p; }, 0),
       cap: cap,
       trimmed: trimmed,
-      // Products in this stack that interact with anticoagulants
-      thinnerFlags: onThinners ? chosen.filter(function (i) { return THINNER_WATCH.indexOf(i.a) > -1; }) : []
+      notices: buildNotices(chosen, flags)
     };
+  }
+
+  // Health flags that don't remove products, but do deserve a heads-up when a
+  // relevant item lands in the stack. Pregnancy is unconditional — it's genuinely
+  // a conversation to have with a clinician, not something we should curate around.
+  function buildNotices(chosen, flags) {
+    var has = function (f) { return flags.indexOf(f) > -1; };
+    var hit = function (list) { return chosen.filter(function (i) { return list.indexOf(i.a) > -1; }); };
+    var out = [];
+
+    if (has('I take blood thinners')) {
+      var t = hit(THINNER_WATCH);
+      if (t.length) {
+        var hasK = t.some(function (i) { return i.a === 'B00J3888HW'; });
+        var why = [];
+        if (hasK) { why.push('vitamin K works against warfarin, so it can blunt your dose'); }
+        if (t.some(function (i) { return i.a !== 'B00J3888HW'; })) { why.push('high-dose omega-3 can further reduce clotting'); }
+        out.push({ t: 'Check with your doctor first', b: t.map(function (i) { return i.n; }).join(' and ') +
+          ' can interact with blood thinners — ' + why.join(', and ') + '.' });
+      }
+    }
+    if (has('High blood pressure')) {
+      var s = hit(SODIUM_WATCH), cf = hit(CAFFEINATED), bits = [];
+      if (s.length) { bits.push(s.map(function (i) { return i.n; }).join(' and ') + ' adds a substantial amount of sodium'); }
+      if (cf.length) { bits.push(cf.map(function (i) { return i.n; }).join(' and ') + ' contains caffeine, which raises blood pressure short-term'); }
+      if (bits.length) { out.push({ t: 'Worth raising with your doctor', b: bits.join('. ') + '. Both are things to check against your current readings and medication.' }); }
+    }
+    if (has('Kidney or liver condition')) {
+      var r = hit(RENAL_WATCH);
+      if (r.length) {
+        out.push({ t: 'Ask your doctor before starting', b: 'Creatine and concentrated protein are safe for healthy kidneys — the scare stories don\'t survive the data. But with existing kidney or liver disease that changes, and ' +
+          r.map(function (i) { return i.n; }).join(', ') + ' should be cleared with your specialist first.' });
+      }
+    }
+    if (has('Pregnant or breastfeeding')) {
+      out.push({ t: 'Please speak to your doctor or midwife', b: 'Several of these are not established as safe in pregnancy or while breastfeeding, and caffeine intake in particular is usually limited. Treat this stack as a starting point for that conversation rather than a recommendation.' });
+    }
+    return out;
   }
 
   function showResult() {
@@ -2471,21 +2526,18 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
       }
       wrap.appendChild(box);
 
-      if (res.thinnerFlags && res.thinnerFlags.length) {
+      (res.notices || []).forEach(function (n) {
         var warn = document.createElement('div');
-        warn.style.cssText = 'background:rgba(255,157,138,.1);border:1px solid rgba(255,157,138,.35);border-left:3px solid #ff9d8a;border-radius:8px;padding:14px 16px;margin:0 0 20px;text-align:left';
+        warn.style.cssText = 'background:rgba(255,157,138,.1);border:1px solid rgba(255,157,138,.35);border-left:3px solid #ff9d8a;border-radius:8px;padding:14px 16px;margin:0 0 14px;text-align:left';
         var wt = document.createElement('div');
         wt.style.cssText = 'font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#ff9d8a;margin-bottom:7px';
-        wt.textContent = 'Check with your doctor first';
+        wt.textContent = n.t;
         var wb = document.createElement('p');
         wb.style.cssText = 'font-size:.83rem;color:rgba(244,249,252,.75);line-height:1.6;margin:0';
-        var names = res.thinnerFlags.map(function (i) { return i.n; }).join(' and ');
-        wb.textContent = names + ' can interact with blood thinners — vitamin K affects how warfarin works, and ' +
-          'high-dose omega-3 can further reduce clotting. This is worth a conversation with your doctor or pharmacist ' +
-          'before you start, not a reason to panic.';
+        wb.textContent = n.b;
         warn.appendChild(wt); warn.appendChild(wb);
         wrap.appendChild(warn);
-      }
+      });
 
       if (res.trimmed && !res.overBudget) {
         var note = document.createElement('p');
