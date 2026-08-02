@@ -2461,6 +2461,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
       c.style.opacity = show ? '1' : '.22';
       c.style.transform = show ? 'scale(1)' : 'scale(.97)';
       c.style.pointerEvents = show ? '' : 'none';
+      // Float matches to the top of the grid so you're not hunting past dimmed cards
+      c.style.order = show ? '0' : '1';
     });
   });
 
