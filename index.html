@@ -805,8 +805,10 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
         <div class="qstep active" data-s="0"><div class="qnum">1</div><div><div class="qstep-t">Your Goal</div><div class="qstep-d">Build muscle, lose fat, improve energy, or general wellness</div></div></div>
         <div class="qstep" data-s="1"><div class="qnum">2</div><div><div class="qstep-t">Your Diet</div><div class="qstep-d">Vegan, vegetarian, keto — we only show what fits</div></div></div>
         <div class="qstep" data-s="2"><div class="qnum">3</div><div><div class="qstep-t">Training Frequency</div><div class="qstep-d">Sets how much we recommend, not just what</div></div></div>
-        <div class="qstep" data-s="3"><div class="qnum">4</div><div><div class="qstep-t">Budget</div><div class="qstep-d">Value picks to premium formulas</div></div></div>
-        <div class="qstep" data-s="4"><div class="qnum">5</div><div><div class="qstep-t">Your Results</div><div class="qstep-d">Personalized product stack with explanations</div></div></div>
+        <div class="qstep" data-s="3"><div class="qnum">4</div><div><div class="qstep-t">Iron &amp; Formulation</div><div class="qstep-d">Some vitamins and minerals differ by sex</div></div></div>
+        <div class="qstep" data-s="4"><div class="qnum">5</div><div><div class="qstep-t">Safety Check</div><div class="qstep-d">Dairy trouble or medication interactions</div></div></div>
+        <div class="qstep" data-s="5"><div class="qnum">6</div><div><div class="qstep-t">Budget</div><div class="qstep-d">Value picks to premium formulas</div></div></div>
+        <div class="qstep" data-s="6"><div class="qnum">7</div><div><div class="qstep-t">Your Results</div><div class="qstep-d">Personalized product stack with explanations</div></div></div>
       </div>
       <div class="qcard reveal-r d2" id="qcard">
         <div class="qcard-q" id="qq">What's your primary fitness goal?</div>
@@ -2125,6 +2127,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     { q: "What's your primary fitness goal?", s: "Choose the one that matters most right now", opts: ["Build Muscle", "Lose Fat", "Boost Energy", "General Wellness"] },
     { q: "What best describes your diet?", s: "We'll only show you products that fit", opts: ["I eat everything", "Vegetarian", "Vegan", "Keto / Low carb"] },
     { q: "How often do you train?", s: "This sets how much we recommend", opts: ["Just starting out", "A few times a week", "Competitive athlete"] },
+    { q: "Male or female?", s: "Iron needs and multivitamins differ", opts: ["Male", "Female", "Prefer not to say"] },
+    { q: "Anything we should know?", s: "Pick any that apply", opts: ["Dairy upsets my stomach", "I take blood thinners", "Neither applies"], multi: true },
     { q: "What's your monthly supplement budget?", s: "We'll find the best value at every price point", opts: ["Under $50", "$50-$100", "$100-$200", "$200+"] }
   ];
   var qstep = 0, qans = [];
@@ -2152,6 +2156,25 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 
   function selOpt(el, v) {
     var wrap = document.getElementById('qopts');
+    if (qdata[qstep] && qdata[qstep].multi) {
+      // Multi-select: toggle, but "Neither applies" is exclusive with the rest
+      var cur = Array.isArray(qans[qstep]) ? qans[qstep].slice() : [];
+      var none = 'Neither applies';
+      if (v === none) {
+        cur = cur.indexOf(none) > -1 ? [] : [none];
+      } else {
+        cur = cur.filter(function (x) { return x !== none; });
+        var at = cur.indexOf(v);
+        if (at > -1) { cur.splice(at, 1); } else { cur.push(v); }
+      }
+      qans[qstep] = cur;
+      if (wrap) {
+        wrap.querySelectorAll('.qopt').forEach(function (x) {
+          x.classList.toggle('selected', cur.indexOf(x.dataset.val || x.textContent.trim()) > -1);
+        });
+      }
+      return;
+    }
     if (wrap) { wrap.querySelectorAll('.qopt').forEach(function (x) { x.classList.remove('selected'); }); }
     el.classList.add('selected');
     qans[qstep] = v;
@@ -2178,7 +2201,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
         btn.type = 'button';
         btn.dataset.val = o;
         btn.textContent = o;
-        if (qans[i] === o) { btn.classList.add('selected'); }
+        var picked = Array.isArray(qans[i]) ? qans[i].indexOf(o) > -1 : qans[i] === o;
+        if (picked) { btn.classList.add('selected'); }
         qoptsEl.appendChild(btn);
       });
       if (qpf) { qpf.style.width = ((i / qdata.length) * 100) + '%'; }
@@ -2189,7 +2213,10 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   }
 
   function nextQ() {
-    if (!qans[qstep]) {
+    if (qdata[qstep] && qdata[qstep].multi) {
+      // Optional question — an empty answer is a valid answer
+      if (!Array.isArray(qans[qstep])) { qans[qstep] = []; }
+    } else if (!qans[qstep]) {
       var wrap = document.getElementById('qopts');
       var first = wrap ? wrap.querySelector('.qopt') : null;
       if (first) { first.classList.add('selected'); }
@@ -2266,6 +2293,18 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   // How many products we recommend, by training frequency. A beginner doesn't need
   // a five-product stack — protein and creatine cover most of the ground.
   var ACT_ITEMS = { 'Just starting out': 2, 'A few times a week': 3, 'Competitive athlete': 3 };
+
+  // Sex-specific formulations — the women's multi contains iron, the men's doesn't.
+  // Men shouldn't supplement iron without a blood test, so these are mutually exclusive.
+  var SEX_ONLY = { 'B01M2YYS2E': 'Female', 'B01MA5K82Q': 'Male' };
+  // Whey blends containing concentrate. Isolates (ISO100, NOW Sports, LEANFIT, Whey+)
+  // are near-zero lactose and are the recommended answer for dairy trouble, not a thing
+  // to avoid — so they deliberately aren't on this list.
+  var DAIRY_HEAVY = ['B000GISU1M', 'B00BMHB5JA'];
+  // Vitamin K antagonises warfarin; high-dose omega-3 has antiplatelet effects.
+  // Neither is a reason to exclude the product — it's a reason to talk to a doctor.
+  var THINNER_WATCH = ['B00J3888HW', 'B00PUX3GDU', 'B07DX89ZHN', 'B0DW4B1B3L',
+    'B0842DJJYC', 'B07GKC6XC7', 'B08CLG83BR'];
   var GOAL_FLAG = { 'Build Muscle': 'm', 'Lose Fat': 'f', 'Boost Energy': 'e', 'General Wellness': 'w' };
   var BUDGET_CAP = { 'Under $50': 50, '$50-$100': 100, '$100-$200': 200, '$200+': 100000 };
   // Which categories matter most, per goal
@@ -2276,7 +2315,10 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     'General Wellness': ['vitamins', 'recovery', 'protein']
   };
 
-  function buildStack(goal, diet, activity, budget) {
+  function buildStack(goal, diet, activity, budget, sex, flags) {
+    flags = flags || [];
+    var noDairy = flags.indexOf('Dairy upsets my stomach') > -1;
+    var onThinners = flags.indexOf('I take blood thinners') > -1;
     var dietFlag = DIET_FLAG[diet];
     var goalFlag = GOAL_FLAG[goal] || 'w';
     var cap = BUDGET_CAP[budget];
@@ -2294,6 +2336,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
       return CATALOG.filter(function (x) {
         if (x.c !== cat) { return false; }
         if (dietFlag && x.d.indexOf(dietFlag) === -1) { return false; }
+        if (noDairy && DAIRY_HEAVY.indexOf(x.a) > -1) { return false; }
+        if (SEX_ONLY[x.a] && sex && sex !== 'Prefer not to say' && SEX_ONLY[x.a] !== sex) { return false; }
         return true;
       }).sort(function (x, y) {
         var xg = x.g.indexOf(goalFlag) > -1 ? 0 : 1;
@@ -2343,18 +2387,22 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
       items: chosen,
       total: chosen.reduce(function (s, i) { return s + i.p; }, 0),
       cap: cap,
-      trimmed: trimmed
+      trimmed: trimmed,
+      // Products in this stack that interact with anticoagulants
+      thinnerFlags: onThinners ? chosen.filter(function (i) { return THINNER_WATCH.indexOf(i.a) > -1; }) : []
     };
   }
 
   function showResult() {
     qcard.style.opacity = '0';
     setTimeout(function () {
-      var goal = qans[0] || 'General Wellness';
-      var diet = qans[1] || 'Omnivore';
-      var activity = qans[2] || '3-4x / Week';
-      var budget = qans[3] || '$50-$100';
-      var res = buildStack(goal, diet, activity, budget);
+      var goal = qans[0] || 'Build Muscle';
+      var diet = qans[1] || 'I eat everything';
+      var activity = qans[2] || 'A few times a week';
+      var sex = qans[3] || 'Prefer not to say';
+      var flags = Array.isArray(qans[4]) ? qans[4] : [];
+      var budget = qans[5] || '$50-$100';
+      var res = buildStack(goal, diet, activity, budget, sex, flags);
       var stack = res.items.map(function (it) {
         return { name: it.n, price: '$' + it.p.toFixed(2), asin: it.a };
       });
@@ -2377,8 +2425,10 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
         p.textContent = 'Nothing in our ' + diet.toLowerCase() + ' range comes in under ' + budget.replace('Under ', '') +
           '. The cheapest match is ' + res.cheapest.n + ' at $' + res.cheapest.p.toFixed(2) + ' — worth stretching for, or start there next month.';
       } else {
-        p.textContent = 'For ' + goal.toLowerCase() + ' on a ' + diet.toLowerCase() +
-          ' diet, training ' + activity.toLowerCase() + ', within ' + budget + '.';
+        var bits = [goal.toLowerCase(), activity.toLowerCase()];
+        if (DIET_FLAG[diet]) { bits.splice(1, 0, diet.toLowerCase()); }
+        if (flags.indexOf('Dairy upsets my stomach') > -1) { bits.push('low-lactose picks only'); }
+        p.textContent = 'Matched on: ' + bits.join(' · ') + ' · within ' + budget + '.';
       }
       wrap.appendChild(p);
 
@@ -2420,6 +2470,22 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
         box.appendChild(totalRow);
       }
       wrap.appendChild(box);
+
+      if (res.thinnerFlags && res.thinnerFlags.length) {
+        var warn = document.createElement('div');
+        warn.style.cssText = 'background:rgba(255,157,138,.1);border:1px solid rgba(255,157,138,.35);border-left:3px solid #ff9d8a;border-radius:8px;padding:14px 16px;margin:0 0 20px;text-align:left';
+        var wt = document.createElement('div');
+        wt.style.cssText = 'font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#ff9d8a;margin-bottom:7px';
+        wt.textContent = 'Check with your doctor first';
+        var wb = document.createElement('p');
+        wb.style.cssText = 'font-size:.83rem;color:rgba(244,249,252,.75);line-height:1.6;margin:0';
+        var names = res.thinnerFlags.map(function (i) { return i.n; }).join(' and ');
+        wb.textContent = names + ' can interact with blood thinners — vitamin K affects how warfarin works, and ' +
+          'high-dose omega-3 can further reduce clotting. This is worth a conversation with your doctor or pharmacist ' +
+          'before you start, not a reason to panic.';
+        warn.appendChild(wt); warn.appendChild(wb);
+        wrap.appendChild(warn);
+      }
 
       if (res.trimmed && !res.overBudget) {
         var note = document.createElement('p');
