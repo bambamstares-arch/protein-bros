@@ -2316,6 +2316,16 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   var RENAL_WATCH = ['B0DH5PD6MJ', 'B0CNJ22ZCW', 'B0CHK24CC4', 'B08DH161T6', 'B0GW9J4B1G',
     'B0DCXQVJX2', 'B0B9YMNYWK', 'B000GISU1M', 'B002N6F2UW', 'B0FCHRNY83', 'B00BMHB5JA',
     'B09Y2MCBRZ', 'B07NHLNZXL', 'B00NBIUGA2', 'B0787RBSF8'];
+
+  // Dropped from the running when the flag is set, BECAUSE an equally good
+  // non-interacting option exists in the same category. We only exclude where we can
+  // substitute — creatine has no substitute, so a kidney flag warns rather than removes.
+  var AVOID = {
+    // D3+K2 out; plain Webber D3 delivers the same vitamin D without the warfarin clash
+    'I take blood thinners': ['B00J3888HW'],
+    // Stimulant-free performance picks exist, and LMNT's 1000mg sodium has milder rivals
+    'High blood pressure': CAFFEINATED.concat(['B084HQ4DYQ'])
+  };
   var GOAL_FLAG = { 'Build Muscle': 'm', 'Lose Fat': 'f', 'Boost Energy': 'e', 'General Wellness': 'w' };
   var BUDGET_CAP = { 'Under $50': 50, '$50-$100': 100, '$100-$200': 200, '$200+': 100000 };
   // Which categories matter most, per goal
@@ -2331,6 +2341,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     var has = function (f) { return flags.indexOf(f) > -1; };
     var noDairy = has('Dairy upsets my stomach');
     var noCaffeine = has('Caffeine sensitive');
+    var avoid = [];
+    flags.forEach(function (f) { if (AVOID[f]) { avoid = avoid.concat(AVOID[f]); } });
     var dietFlag = DIET_FLAG[diet];
     var goalFlag = GOAL_FLAG[goal] || 'w';
     var cap = BUDGET_CAP[budget];
@@ -2350,6 +2362,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
         if (dietFlag && x.d.indexOf(dietFlag) === -1) { return false; }
         if (noDairy && DAIRY_HEAVY.indexOf(x.a) > -1) { return false; }
         if (noCaffeine && CAFFEINATED.indexOf(x.a) > -1) { return false; }
+        if (avoid.indexOf(x.a) > -1) { return false; }
         if (SEX_ONLY[x.a] && sex && sex !== 'Prefer not to say' && SEX_ONLY[x.a] !== sex) { return false; }
         return true;
       }).sort(function (x, y) {
@@ -2419,21 +2432,22 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     var out = [];
 
     if (has('I take blood thinners')) {
+      out.push({ ok: true, t: 'Adjusted for your medication',
+        b: 'We\'ve kept vitamin K2 out of your stack — it works directly against warfarin — and recommended plain vitamin D3 instead, which gives you the same benefit without the clash.' });
       var t = hit(THINNER_WATCH);
       if (t.length) {
-        var hasK = t.some(function (i) { return i.a === 'B00J3888HW'; });
-        var why = [];
-        if (hasK) { why.push('vitamin K works against warfarin, so it can blunt your dose'); }
-        if (t.some(function (i) { return i.a !== 'B00J3888HW'; })) { why.push('high-dose omega-3 can further reduce clotting'); }
-        out.push({ t: 'Check with your doctor first', b: t.map(function (i) { return i.n; }).join(' and ') +
-          ' can interact with blood thinners — ' + why.join(', and ') + '.' });
+        out.push({ t: 'Still worth asking your doctor', b: t.map(function (i) { return i.n; }).join(' and ') +
+          ' can mildly reduce clotting on top of your medication. There\'s no omega-3 without that effect, so we haven\'t swapped it out — it\'s genuinely good for you, it just needs to be a decision you make together.' });
       }
     }
     if (has('High blood pressure')) {
-      var s = hit(SODIUM_WATCH), cf = hit(CAFFEINATED), bits = [];
-      if (s.length) { bits.push(s.map(function (i) { return i.n; }).join(' and ') + ' adds a substantial amount of sodium'); }
-      if (cf.length) { bits.push(cf.map(function (i) { return i.n; }).join(' and ') + ' contains caffeine, which raises blood pressure short-term'); }
-      if (bits.length) { out.push({ t: 'Worth raising with your doctor', b: bits.join('. ') + '. Both are things to check against your current readings and medication.' }); }
+      out.push({ ok: true, t: 'Adjusted for your blood pressure',
+        b: 'We\'ve left stimulants and the highest-sodium electrolyte out of your stack, since both push blood pressure up.' });
+      var s = hit(SODIUM_WATCH);
+      if (s.length) {
+        out.push({ t: 'Keep an eye on this one', b: s.map(function (i) { return i.n; }).join(' and ') +
+          ' still adds sodium, just far less than the packets we skipped. Worth checking against your current readings.' });
+      }
     }
     if (has('Kidney or liver condition')) {
       var r = hit(RENAL_WATCH);
@@ -2527,10 +2541,13 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
       wrap.appendChild(box);
 
       (res.notices || []).forEach(function (n) {
+        // Green when we already handled it for them, amber when it needs their attention
+        var hue = n.ok ? '23,184,200' : '255,157,138';
+        var solid = n.ok ? '#17b8c8' : '#ff9d8a';
         var warn = document.createElement('div');
-        warn.style.cssText = 'background:rgba(255,157,138,.1);border:1px solid rgba(255,157,138,.35);border-left:3px solid #ff9d8a;border-radius:8px;padding:14px 16px;margin:0 0 14px;text-align:left';
+        warn.style.cssText = 'background:rgba(' + hue + ',.1);border:1px solid rgba(' + hue + ',.35);border-left:3px solid ' + solid + ';border-radius:8px;padding:14px 16px;margin:0 0 14px;text-align:left';
         var wt = document.createElement('div');
-        wt.style.cssText = 'font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#ff9d8a;margin-bottom:7px';
+        wt.style.cssText = 'font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:' + solid + ';margin-bottom:7px';
         wt.textContent = n.t;
         var wb = document.createElement('p');
         wb.style.cssText = 'font-size:.83rem;color:rgba(244,249,252,.75);line-height:1.6;margin:0';
