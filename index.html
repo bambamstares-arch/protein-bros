@@ -421,23 +421,41 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .mnav-link:hover{color:var(--gold)}
 .mnav-cta{background:var(--gold);color:var(--green-deep);text-align:center;padding:13px;border-radius:var(--radius-xl);font-weight:600;margin-top:22px;transition:background var(--t)}
 .mnav-cta:hover{background:var(--gold-light)}
+
+/* Cookie consent */
+.cbar{position:fixed;left:16px;right:16px;bottom:16px;z-index:400;max-width:960px;margin:0 auto;background:var(--green-dark);border:1px solid rgba(23,184,200,.28);border-radius:var(--radius-md);box-shadow:var(--shadow-lg);padding:20px 22px;display:none;gap:20px;align-items:center;flex-wrap:wrap}
+.cbar.show{display:flex}
+.cbar-t{flex:1;min-width:260px;font-size:.87rem;color:rgba(244,249,252,.72);line-height:1.6}
+.cbar-t strong{color:var(--text-light);font-weight:600}
+.cbar-t a{color:var(--gold);text-decoration:underline}
+.cbar-btns{display:flex;gap:10px;flex-wrap:wrap}
+.cbtn{font-size:.85rem;font-weight:600;padding:10px 20px;border-radius:var(--radius-xl);cursor:pointer;transition:background var(--t),border-color var(--t)}
+.cbtn-y{background:var(--gold);color:var(--green-deep);border:1.5px solid var(--gold)}
+.cbtn-y:hover{background:var(--gold-light);border-color:var(--gold-light)}
+.cbtn-n{background:transparent;color:rgba(244,249,252,.75);border:1.5px solid rgba(244,249,252,.25)}
+.cbtn-n:hover{border-color:rgba(244,249,252,.5);color:var(--text-light)}
+@media(max-width:560px){.cbar{padding:18px}.cbar-btns{width:100%}.cbtn{flex:1}}
 </style>
-<!-- Meta Pixel Code -->
+<!-- Meta Pixel — held until the visitor consents (Quebec Law 25 requires opt-in) -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1375994587967565');
-fbq('track', 'PageView');
+window.PB_PIXEL_ID = '1375994587967565';
+window.pbLoadPixel = function () {
+  if (window.fbq) { return; }
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', window.PB_PIXEL_ID);
+  fbq('track', 'PageView');
+};
+try {
+  if (localStorage.getItem('pb-consent') === 'accepted') { window.pbLoadPixel(); }
+} catch (e) { /* storage blocked — treat as no consent */ }
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1375994587967565&amp;ev=PageView&amp;noscript=1"
-alt=""/></noscript>
 <!-- End Meta Pixel Code -->
 <script type="application/ld+json">
 {
@@ -1603,7 +1621,7 @@ alt=""/></noscript>
         </div>
         <div class="checkrow">
           <input id="su-consent" type="checkbox" required>
-          <label for="su-consent">I agree to receive email updates and accept the Privacy Policy. (CASL compliant — unsubscribe anytime.)</label>
+          <label for="su-consent">I agree to receive email updates and accept the <a href="/privacy.html" style="color:rgba(23,184,200,.85);text-decoration:underline">Privacy Policy</a>. (CASL compliant — unsubscribe anytime.)</label>
         </div>
         <button class="auth-submit" type="submit" id="signupSubmit">Subscribe for Free</button>
         <p class="auth-msg" id="signupMsg" role="status" aria-live="polite"></p>
@@ -1637,10 +1655,19 @@ alt=""/></noscript>
     </div>
     <div class="fbot">
       <div class="fcopy">&copy; 2026 <span>Protein Bros</span>. Toronto, Ontario. Built with love and whey.</div>
-      <div class="flegal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#about">Affiliate Disclosure</a></div>
+      <div class="flegal"><a href="/privacy.html">Privacy</a><a href="#" id="cookiePrefs">Cookie Settings</a><a href="#about">Affiliate Disclosure</a></div>
     </div>
   </div>
 </footer>
+
+<!-- Cookie consent -->
+<div class="cbar" id="cbar" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <div class="cbar-t"><strong>We'd like to use one advertising cookie.</strong> The Meta Pixel tells us how our Facebook and Instagram ads are doing. It only runs if you say yes, and declining changes nothing about how the site works. Your quiz answers never leave your browser either way. <a href="/privacy.html">Read our privacy policy</a>.</div>
+  <div class="cbar-btns">
+    <button class="cbtn cbtn-n" type="button" id="cNo">Decline</button>
+    <button class="cbtn cbtn-y" type="button" id="cYes">Accept</button>
+  </div>
+</div>
 
 <!-- Article Modal -->
 <div class="amodal" id="amodal" role="dialog" aria-modal="true" aria-labelledby="artHeading" aria-hidden="true">
@@ -2722,6 +2749,29 @@ alt=""/></noscript>
       else if (mn.classList.contains('open')) { closeMn(); }
     }
   });
+
+  // ---- Cookie consent ----
+  // Decline is as prominent as accept, and no tracker fires before a choice.
+  var cbar = document.getElementById('cbar');
+  function readConsent() {
+    try { return localStorage.getItem('pb-consent'); } catch (e) { return null; }
+  }
+  function setConsent(v) {
+    try { localStorage.setItem('pb-consent', v); } catch (e) { /* storage blocked */ }
+    cbar.classList.remove('show');
+    if (v === 'accepted' && window.pbLoadPixel) { window.pbLoadPixel(); }
+  }
+  if (!readConsent()) { setTimeout(function () { cbar.classList.add('show'); }, 900); }
+  document.getElementById('cYes').addEventListener('click', function () { setConsent('accepted'); });
+  document.getElementById('cNo').addEventListener('click', function () { setConsent('declined'); });
+  // Footer link lets people change their mind later, which Law 25 requires
+  var reopen = document.getElementById('cookiePrefs');
+  if (reopen) {
+    reopen.addEventListener('click', function (e) {
+      e.preventDefault();
+      cbar.classList.add('show');
+    });
+  }
 
   // ---- Signup: Google demo + email form ----
   var googleBtn = document.getElementById('googleBtn');
