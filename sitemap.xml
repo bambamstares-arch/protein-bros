@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://proteinbros.ca/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://proteinbros.ca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proteinbros.ca/"/>
+    <image:image>
+      <image:loc>https://proteinbros.ca/og-image.jpg</image:loc>
+      <image:title>Protein Bros — Toronto's science-backed supplement finder</image:title>
+      <image:caption>Find your perfect protein: Top 5 guides to protein powder, creatine, pre-workout and vitamins in Canada.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://proteinbros.ca/logo.png</image:loc>
+      <image:title>Protein Bros logo</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://proteinbros.ca/privacy.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
