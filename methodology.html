@@ -115,5 +115,92 @@ footer{border-top:1px solid rgba(12,30,53,.1);margin-top:52px;padding-top:24px;f
     &copy; 2026 Protein Bros, Toronto, Ontario. <a href="/">Back to the site</a> &middot; <a href="/privacy.html">Privacy Policy</a>
   </footer>
 </main>
+<!-- Protein Bros — outbound Amazon click tracking (AmazonClick) -->
+<script>
+(function () {
+  'use strict';
+
+  var BANDS = [[25,'under_25'],[40,'25_40'],[70,'40_70'],[110,'70_110'],[Infinity,'over_110']];
+
+  function band(v) {
+    if (typeof v !== 'number' || isNaN(v)) return 'unknown';
+    for (var i = 0; i < BANDS.length; i++) if (v < BANDS[i][0]) return BANDS[i][1];
+    return 'unknown';
+  }
+
+  // Pull the first dollar amount out of a string.
+  function money(s) {
+    if (!s) return NaN;
+    var m = s.match(/\$\s?([\d,]+(?:\.\d{1,2})?)/);
+    return m ? parseFloat(m[1].replace(/,/g, '')) : NaN;
+  }
+
+  function txt(el, sel) {
+    var n = el && el.querySelector(sel);
+    return n ? n.textContent.trim() : '';
+  }
+
+  // Read the card the link sits in. Two layouts exist:
+  //   index.html  -> article.pcard, price in .pprice
+  //   guide pages -> .pick,         price in .pick-spec
+  // IMPORTANT: on .pcard the price MUST come from .pprice, not the card text.
+  // Card text leads with the per-kg unit price (e.g. "$56.52 / kg"), which is
+  // not the purchase price and would land the item in the wrong band.
+  function describe(link) {
+    var card = link.closest('article.pcard');
+    if (card) {
+      return {
+        product: (txt(card, '.pbrand') + ' ' + txt(card, '.pname')).trim(),
+        price:   money(txt(card, '.pprice')),
+        cat:     card.getAttribute('data-cat') || 'unknown',
+        place:   link.closest('#quiz') ? 'quiz_result' : 'product_grid'
+      };
+    }
+
+    var pick = link.closest('.pick');
+    if (pick) {
+      return {
+        product: (txt(pick, '.pick-brand') + ' ' + txt(pick, '.pick-name')).trim(),
+        price:   money(txt(pick, '.pick-spec')),
+        cat:     'guide',
+        place:   'guide'
+      };
+    }
+
+    return {
+      product: (link.getAttribute('aria-label') || link.textContent || '').trim(),
+      price:   NaN,
+      cat:     'unknown',
+      place:   /\/s\?k=/.test(link.href) ? 'browse_all' : 'other'
+    };
+  }
+
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href*="amazon."]');
+    if (!link) return;
+
+    // Pixel is consent-gated (Quebec Law 25 opt-in). No consent, no event.
+    // Measured clicks are therefore a FLOOR, not a true count.
+    if (typeof window.fbq !== 'function') return;
+
+    try {
+      var d = describe(link);
+      var asin = (link.href.match(/\/dp\/([A-Z0-9]{10})/) || [])[1] || 'none';
+
+      fbq('trackCustom', 'AmazonClick', {
+        product:    d.product.slice(0, 100) || 'unknown',
+        price_band: band(d.price),
+        price:      isNaN(d.price) ? null : d.price,
+        category:   d.cat,
+        placement:  d.place,
+        asin:       asin,
+        page:       location.pathname
+      });
+    } catch (err) {
+      // Tracking must never block the outbound click.
+    }
+  }, true); // capture phase — fires even if something stops propagation
+})();
+</script>
 </body>
 </html>
