@@ -1,5 +1,5 @@
 # proteinbros.ca — robots.txt
-# Last updated: 2026-08-06
+# Last updated: 2026-08-23
 
 # ── Default: everything is open ──────────────────────────────
 User-agent: *
